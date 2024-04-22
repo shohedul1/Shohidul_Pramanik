@@ -25,7 +25,7 @@ const Hero = () => {
           {/* lef side  */}
           <div className={mainDiv}>
             <div className={photography}>Protography</div>
-            <h1 className='h1'>Let's make magic !</h1>
+            <h1 className='h1'>Let&apos;s make magic !</h1>
             <p className={subtitle}>
               We are fine art, rature & portrait film photographers from Son Frencisco,with a special love for natural light, medium format film cameras & whit freckles.
             </p>
