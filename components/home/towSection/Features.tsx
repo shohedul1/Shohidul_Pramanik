@@ -33,7 +33,7 @@ const Features = () => {
               Everything you need to faster.
             </p>
             <p className='mt-6 text-lg leading-8 text-black dark:text-white'>
-              It's wide array of extremely useful & user-friendly elements and features turn website creation into a cakewalk.Get started now & see just how easy it is to make the website you always wanted.
+              It&apos;s wide array of extremely useful & user-friendly elements and features turn website creation into a cakewalk.Get started now & see just how easy it is to make the website you always wanted.
             </p>
           </div>
         </div>
