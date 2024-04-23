@@ -9,10 +9,11 @@ interface Props {
 const HeroImg: React.FC<Props> = ({ containerStyles, imgSrc }) => {
   return (
     <div className={containerStyles}>
-      <Image
+       <Image
         src={imgSrc}
-        fill
-        priority
+        layout="responsive" 
+        width={505} 
+        height={505} 
         alt='image'
       />
     </div>

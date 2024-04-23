@@ -67,11 +67,13 @@ const projectData = [
   }
 ]
 const Gallery = () => {
+  const title= "section-title mb-8 xl:mb-16 text-center mx-auto";
+  const gridDive = "grid xl:grid-cols-3 grid-cols-1 gap-x-2 gap-y-2";
   return (
     <section className="relative mb-12 xl:mb-48">
       <div className="container mx-auto">
-        <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto">My Gallery</h2>
-        <div className="grid xl:grid-cols-3 grid-cols-1 gap-x-2 gap-y-2">
+        <h2 className={title}>My Gallery</h2>
+        <div className={gridDive}>
           {
             projectData.map((project, index) => {
               return (

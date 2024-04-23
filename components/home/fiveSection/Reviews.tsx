@@ -52,12 +52,14 @@ const reviewsData = [
 ]
 
 const Reviews = () => {
+  const title = "text-center mb-8 xl:mb-16 text-primary text-4xl";
+  const card = 'p-8 cursor-pointer hover:bg-tertiary dark:hover:bg-white/10 transition-all duration-700';
   return (
     <section className="mb-12 xl:mb-32">
       <div className="container mx-auto">
       {/* <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto"></h2> */}
 
-        <h2 className="text-center mb-8 xl:mb-16 text-primary text-4xl"> They say about our work</h2>
+        <h2 className={title}> They say about our work</h2>
         <Swiper
           slidesPerView={1}
           breakpoints={{
@@ -75,7 +77,7 @@ const Reviews = () => {
             reviewsData.map((person, index) => {
               return (
                 <SwiperSlide key={index}>
-                  <Card key={index} className='p-8 cursor-pointer hover:bg-tertiary dark:hover:bg-white/10 transition-all duration-700'>
+                  <Card key={index} className={card}>
                     <CardHeader className='p-0 mb-3'>
                       <div className='flex flex-col items-start gap-x-4'>
                         <Image
