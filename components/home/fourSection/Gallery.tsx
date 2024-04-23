@@ -73,9 +73,9 @@ const Gallery = () => {
         <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto">My Gallery</h2>
         <div className="grid xl:grid-cols-3 grid-cols-1 gap-x-2 gap-y-2">
           {
-            projectData.map((project,index)=>{
-              return(
-                <ProjectCart project={project} key={index}/>
+            projectData.map((project, index) => {
+              return (
+                <ProjectCart project={project} key={index} />
               )
             })
           }

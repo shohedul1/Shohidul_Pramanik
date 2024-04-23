@@ -89,6 +89,10 @@
 }
 
 .badge {
-  @apply z-10 w-[250px] px-16 h-[90px] bg-primary dark:backdrop-blur-[44px] shadow-2xl p-4 rounded-full flex items-center gap-x-4
+  @apply z-10 w-[250px] px-16 h-[90px] bg-primary dark:backdrop-blur-[44px] shadow-2xl p-4 rounded-full flex items-center gap-x-4;
 }
 
+
+ span.swiper-pagination-bullet {
+  @apply bg-red-500 w-5 h-5 active:bg-blue-500 ;
+}

@@ -2,7 +2,6 @@
 
 import { Badge } from "@/components/ui/badge";
 import { Card, CardHeader } from "@/components/ui/card";
-import clsx from "clsx";
 import { Link2Icon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";

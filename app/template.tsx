@@ -30,7 +30,7 @@ const Template: React.FC<TemplateProps> = ({ children }) => {
                     className='fixed z-50 bg-primary w-1 h-full top-0 right-0 transition-all duration-700'
                 ></span>
             )}
-           <div className='h-[3500px]'></div>
+           {/* <div className='h-[3500px]'></div> */}
         </>
     );
 };
