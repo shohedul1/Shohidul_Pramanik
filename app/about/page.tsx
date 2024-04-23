@@ -40,11 +40,12 @@ const About = () => {
         <Fade direction='up' delay={400} cascade damping={1e-1} triggerOnce={true}>
           <h2 className={title}>About me</h2>
         </Fade>
-        <div className="flex flex-col xl:flex-row">
+        <div className="flex flex-col gap-20 xl:flex-row">
           {/* image */}
           <div className='relative flex-1 xl:flex'>
             <Fade direction='left' delay={600} cascade damping={1e-1} triggerOnce={true}>
-              <HeroImg imgSrc='https://res.cloudinary.com/djhjt07rh/image/upload/v1713904914/437585332_976969253793270_3287469938990990648_n_dtckaj.jpg' containerStyles='relative w-[500px] h-full' />
+              <HeroImg imgSrc='https://res.cloudinary.com/djhjt07rh/image/upload/v1713904914/437585332_976969253793270_3287469938990990648_n_dtckaj.jpg' 
+              containerStyles='relative' />
             </Fade>
           </div>
           <div className="flex-1">
