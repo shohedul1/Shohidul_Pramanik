@@ -1,4 +1,7 @@
 'use client';
+//react awesome reveal animation
+import { Fade } from "react-awesome-reveal";
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Smile, Scan, Bird } from "lucide-react";
 const servicesData = [
@@ -28,9 +31,12 @@ const Services = () => {
     return (
         <section className="mb-12 xl:mb-36">
             <div className="container mx-auto">
+            <Fade direction='up' delay={400} cascade damping={1e-1} triggerOnce={true}>
                 <h2 className={ourDiv}>Our Services</h2>
+            </Fade>
                 {/* category Items */}
                 <div className={gridDiv}>
+                <Fade direction='up' delay={600} cascade damping={1e-1} triggerOnce={true}>
                     {
                         servicesData.map((item, index) => {
                             return (
@@ -52,6 +58,7 @@ const Services = () => {
                             )
                         })
                     }
+                </Fade>
 
                 </div>
             </div>

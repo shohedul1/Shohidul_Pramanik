@@ -1,4 +1,7 @@
 'use client';
+//react awesome reveal animation
+import { Fade } from "react-awesome-reveal";
+
 import { Pagination } from 'swiper/modules';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -57,52 +60,54 @@ const Reviews = () => {
   return (
     <section className="mb-12 xl:mb-32">
       <div className="container mx-auto">
-      {/* <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto"></h2> */}
-
-        <h2 className={title}> They say about our work</h2>
-        <Swiper
-          slidesPerView={1}
-          breakpoints={{
-            640: { slidesPerView: 2 },
-            1400: { slidesPerView: 3 },
-          }}
-          spaceBetween={30}
-          modules={[Pagination]}
-          pagination={{
-            clickable: true,
-          }}
-          className='h-[410px] '
-        >
-          {
-            reviewsData.map((person, index) => {
-              return (
-                <SwiperSlide key={index}>
-                  <Card key={index} className={card}>
-                    <CardHeader className='p-0 mb-3'>
-                      <div className='flex flex-col items-start gap-x-4'>
-                        <Image
-                          src={person.avatar}
-                          alt='iamge'
-                          width={70}
-                          height={70}
-                          priority
-                          className='mb-2'
-                        />
-                        {/* name */}
-                        <div className='flex flex-col'>
-                          <CardTitle>{person.name}</CardTitle>
-                          <p>{person.job}</p>
+        <Fade direction='up' delay={400} cascade damping={1e-1} triggerOnce={true}>
+          <h2 className={title}> They say about our work</h2>
+        </Fade>
+        <Fade direction='up' delay={100} cascade damping={1e-1} triggerOnce={true}>
+          <Swiper
+            slidesPerView={1}
+            breakpoints={{
+              640: { slidesPerView: 2 },
+              1400: { slidesPerView: 3 },
+            }}
+            spaceBetween={30}
+            modules={[Pagination]}
+            pagination={{
+              clickable: true,
+            }}
+            className='h-[410px] '
+          >
+            {
+              reviewsData.map((person, index) => {
+                return (
+                  <SwiperSlide key={index}>
+                    <Card key={index} className={card}>
+                      <CardHeader className='p-0 mb-3'>
+                        <div className='flex flex-col items-start gap-x-4'>
+                          <Image
+                            src={person.avatar}
+                            alt='iamge'
+                            width={70}
+                            height={70}
+                            priority
+                            className='mb-2'
+                          />
+                          {/* name */}
+                          <div className='flex flex-col'>
+                            <CardTitle>{person.name}</CardTitle>
+                            <p>{person.job}</p>
+                          </div>
                         </div>
-                      </div>
-                    </CardHeader>
-                    <CardDescription className='text-lg text-muted-foreground'>{person.review}</CardDescription>
-                  </Card>
-                </SwiperSlide>
-              )
-            })
-          }
-        </Swiper> 
-         
+                      </CardHeader>
+                      <CardDescription className='text-lg text-muted-foreground'>{person.review}</CardDescription>
+                    </Card>
+                  </SwiperSlide>
+                )
+              })
+            }
+          </Swiper>
+        </Fade>
+
       </div>
     </section>
   )
