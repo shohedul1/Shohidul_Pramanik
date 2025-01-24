@@ -31,7 +31,7 @@ const Footer = () => {
                 Crafting responsive and functional websites to bring your ideas to life.
               </p>
               <span className="font-bold bg-gradient-to-r from-zinc-100 to-green-400 text-transparent bg-clip-text ">
-                Let's build something amazing together!
+                Let&apos;s build something amazing together!
               </span>
               <Socials
                 iconsStyles={iconsStyles}
