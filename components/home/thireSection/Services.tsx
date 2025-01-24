@@ -22,7 +22,7 @@ const servicesData = [
     },
 ]
 const Services = () => {
-    const ourDiv = "section-title mb-6 xl:mb-24 text-center mx-auto";
+    const ourDiv = "section-title mb-12 xl:mb-24 text-center mx-auto";
     const gridDiv = "grid xl:grid-cols-3 justify-center gap-y-12 xl:gap-y-24 xl:gap-x-8";
     const card = "relative w-full max-w-[425px] h-[450px] flex flex-col pb-10 justify-center items-center cursor-pointer hover:bg-tertiary dark:hover:bg-white/10 transition-all duration-700";
     const iconDiv = "w-[80px] h-[80px] bg-primary text-white  rounded-full flex justify-center items-center absolute -bottom-6 right-6";
@@ -30,7 +30,7 @@ const Services = () => {
 
     return (
         <section className="mb-12 xl:mb-36">
-            <div className="container mx-auto">
+            <div className="container mx-auto xl:translate-y-0 -translate-y-20">
                 <Fade direction='up' delay={400} cascade damping={1e-1} triggerOnce={true}>
                     <h2 className={ourDiv}>Our Services</h2>
                 </Fade>

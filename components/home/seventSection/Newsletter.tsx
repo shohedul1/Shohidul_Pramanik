@@ -67,16 +67,16 @@ const Newsletter = () => {
                                 </div>
                             </Fade>
                             <Fade direction='right' delay={1200} cascade damping={1e-1} triggerOnce={true}>
-                            <div className='flex flex-col items-start'>
-                                <div className='bg-primary p-2 ring-1 ring-white/10 rounded-full'>
-                                    <HandRaisedIcon className='h-6 w-6 text-white' />
-                                </div>
-                                <dt className='mt-4 font-semibold text-muted-foreground'>Full Security</dt>
-                                <dd className='mt-2 leading-7'>
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque quas quos adipisci et culpa error dolores assumenda enim vero debitis!
+                                <div className='flex flex-col items-start'>
+                                    <div className='bg-primary p-2 ring-1 ring-white/10 rounded-full'>
+                                        <HandRaisedIcon className='h-6 w-6 text-white' />
+                                    </div>
+                                    <dt className='mt-4 font-semibold text-muted-foreground'>Full Security</dt>
+                                    <dd className='mt-2 leading-7'>
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque quas quos adipisci et culpa error dolores assumenda enim vero debitis!
 
-                                </dd>
-                            </div>
+                                    </dd>
+                                </div>
 
                             </Fade>
                         </dl>

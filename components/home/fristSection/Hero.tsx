@@ -10,6 +10,7 @@ import Badge from './Badge'
 
 //react awesome reveal animation
 import { Fade } from "react-awesome-reveal";
+import Image from 'next/image';
 
 
 
@@ -19,10 +20,10 @@ import { Fade } from "react-awesome-reveal";
 
 const Hero = () => {
   const mainDiv = 'flex max-w-[800px] flex-col justify-center mx-auto xl:mx-0 text-center xl:text-left';
-  const photography = 'text-sm uppercase font-semibold mb-4 text-primary tracking-[4px] text-[50px] ';
+  const photography = 'text-6xl uppercase font-semibold mb-4 text-primary tracking-[4px] bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text ';
   const subtitle = 'subtile max-w-[590px] mt-4 mx-auto xl:mx-0';
   const subcribeButtonDiv = 'flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12 mt-4';
-  const containerStyle = "flex gap-x-6 mx-auto xl:mx-0";
+  const containerStyle = "";
   const iconsStyles = 'text-foreground text-[22px] hover:text-primary transition-all';
 
 
@@ -37,14 +38,13 @@ const Hero = () => {
               <div className={photography}>Web Coder</div>
             </Fade>
             <Fade direction='up' delay={620} cascade damping={1e-1} triggerOnce={true}>
-              <h1 className='h1'>Let&apos;s make magic !</h1>
+              <h1 className='text-5xl'>Let&apos;s make magic !</h1>
             </Fade>
             <Fade direction='up' delay={800} cascade damping={1e-1} triggerOnce={true}>
               <p className={subtitle}>
                 We are passionate MERN stack web developers from San Francisco, with a special love for clean code, intuitive user experiences, and building dynamic full-stack applications with modern tools like React, Node.js, and MongoDB
               </p>
             </Fade>
-
             {/* subcribs input and button section  */}
             <Fade direction='up' delay={1000} cascade damping={1e-1} triggerOnce={true}>
               <form action="">
@@ -61,21 +61,37 @@ const Hero = () => {
                 </div>
               </form>
             </Fade>
-            <Fade direction='up' delay={620} cascade damping={1e-1} triggerOnce={true}>
-              <Socials containerStyle={containerStyle} iconsStyles={iconsStyles} />
-            </Fade>
+            {/* social icon section */}
+            <div className='flex justify-center gap-5 mt-20 xl:mt-0 relative '>
+              <Fade direction='up' delay={620} cascade damping={1e-1} triggerOnce={true}>
+                <Socials containerStyle={"flex gap-x-6 mx-auto xl:mx-0 "} iconsStyles={iconsStyles} />
+              </Fade>
+              <div className='xl:hidden flex translate-x-[10%] -translate-y-1/2 '>
+                <Fade direction='up' delay={420} cascade damping={1e-1} triggerOnce={true}>
+                  <div>
+                    <Image
+                      width={500}
+                      height={500}
+                      src={'/about/shohidul_Pramanik.jpg'}
+                      alt='shohidul_Icon'
+                      className='w-40 h-40 rounded-full bg-no-repeat object-cover hover:scale-110 transition-all duration-500  '
+                    />
+                  </div>
+                </Fade>
+              </div>
+            </div>
 
           </div>
           {/* benner image */}
           <Fade direction='right' delay={600} cascade damping={1e-1} triggerOnce={true}>
-            <div className='xl:flex hidden relative'>
-              <HeroImg imgSrc='/about/shohidul_Pramanik.jpg' containerStyles='w-[475px] bg-no-repeat relative bg-bottom' />
+            <div className='xl:flex hidden relative '>
+              <HeroImg imgSrc='/about/shohidul_Pramanik.jpg' containerStyles='w-[475px] bg-no-repeat relative bg-bottom ' />
             </div>
 
           </Fade>
         </div>
         {/* badge section */}
-        <div className='py-24 sm:py-32'>
+        <div className='py-24 sm:py-32 xl:translate-y-0 -translate-y-20'>
           <div className='mx-auto max-w-7xl px-6 lg:px-8'>
             <dl className='grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3'>
               <Fade direction='up' delay={800} cascade damping={1e-1} triggerOnce={true}>

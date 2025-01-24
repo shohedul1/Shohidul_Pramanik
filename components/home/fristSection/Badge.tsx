@@ -13,7 +13,7 @@ interface BadgeProps {
 
 const Badge: React.FC<BadgeProps> = ({ containerStyle, icon, endCountNum, badgeText, endCountText }) => {
   return (
-    <div className={`badge ${containerStyle}`}>
+    <div className={`badge ${containerStyle} `}>
       <div className='text-3xl text-white'>{icon}</div>
       <div className='flex items-center gap-x-2'>
         <div className='text-4xl leading-none font-bold text-white'>
