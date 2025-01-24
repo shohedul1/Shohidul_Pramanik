@@ -1,13 +1,14 @@
 import Link from 'next/link';
 import React from 'react';
-import { RiPaypalFill, RiSnapchatFill, RiSkypeFill, RiFacebookFill, RiInstagramFill } from 'react-icons/ri';
+import { RiFacebookFill } from 'react-icons/ri';
+import { FaWhatsapp } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+
 
 const icons = [
-    { path: '/', name: <RiPaypalFill /> },
-    { path: '/', name: <RiSnapchatFill /> },
-    { path: '/', name: <RiSkypeFill /> },
-    { path: '/', name: <RiFacebookFill /> },
-    { path: '/', name: <RiInstagramFill /> },
+    { path: 'https://wa.me/01758225368', name: <FaWhatsapp /> },
+    { path: 'https://www.facebook.com/sshohedul.islam', name: <RiFacebookFill /> },
+    { path: 'https://www.linkedin.com/in/shohedul-pramanik-5b8273318', name: <FaLinkedin /> },
 ];
 
 interface SocialsProps {

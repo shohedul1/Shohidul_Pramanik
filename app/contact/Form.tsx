@@ -17,7 +17,6 @@ const intialValue = {
     lastName: "",
     email: "",
     message: ""
-
 }
 
 const Form = () => {

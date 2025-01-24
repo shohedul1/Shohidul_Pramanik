@@ -7,18 +7,18 @@ import { Smile, Scan, Bird } from "lucide-react";
 const servicesData = [
     {
         icon: <Smile />,
-        title: 'Portraiture',
-        description: 'But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain and I give a complete account of the system'
+        title: 'Web Developmen',
+        description: 'Build responsive, scalable, and modern websites using the latest technologies like React, Next.js, and TailwindCSS'
     },
     {
         icon: <Scan />,
-        title: 'Landscapes',
-        description: 'But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain and I give a complete account of the system'
+        title: 'Backend Developmen',
+        description: 'Develop robust APIs and backend systems using Node.js, Express.js, and MongoDB for seamless data managemen'
     },
     {
         icon: <Bird />,
-        title: 'Lifestyle',
-        description: 'But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain and I give a complete account of the system'
+        title: 'UI/UX Design',
+        description: 'Create user-friendly and visually appealing designs that ensure great user experiences.'
     },
 ]
 const Services = () => {
@@ -31,34 +31,34 @@ const Services = () => {
     return (
         <section className="mb-12 xl:mb-36">
             <div className="container mx-auto">
-            <Fade direction='up' delay={400} cascade damping={1e-1} triggerOnce={true}>
-                <h2 className={ourDiv}>Our Services</h2>
-            </Fade>
+                <Fade direction='up' delay={400} cascade damping={1e-1} triggerOnce={true}>
+                    <h2 className={ourDiv}>Our Services</h2>
+                </Fade>
                 {/* category Items */}
                 <div className={gridDiv}>
-                <Fade direction='up' delay={600} cascade damping={1e-1} triggerOnce={true}>
-                    {
-                        servicesData.map((item, index) => {
-                            return (
-                                <Card key={index} className={card}>
-                                    <CardHeader className="text-primary">
-                                        <div className={iconDiv}>
-                                            {item.icon}
-                                        </div>
-                                    </CardHeader>
-                                    <CardContent className="text-center ">
-                                        <CardTitle className="mb-4">
-                                            {item.title}
-                                        </CardTitle>
-                                        <CardDescription className="text-lg">
-                                            {item.description}
-                                        </CardDescription>
-                                    </CardContent>
-                                </Card>
-                            )
-                        })
-                    }
-                </Fade>
+                    <Fade direction='up' delay={600} cascade damping={1e-1} triggerOnce={true}>
+                        {
+                            servicesData.map((item, index) => {
+                                return (
+                                    <Card key={index} className={card}>
+                                        <CardHeader className="text-primary">
+                                            <div className={iconDiv}>
+                                                {item.icon}
+                                            </div>
+                                        </CardHeader>
+                                        <CardContent className="text-center ">
+                                            <CardTitle className="mb-4">
+                                                {item.title}
+                                            </CardTitle>
+                                            <CardDescription className="text-lg">
+                                                {item.description}
+                                            </CardDescription>
+                                        </CardContent>
+                                    </Card>
+                                )
+                            })
+                        }
+                    </Fade>
 
                 </div>
             </div>

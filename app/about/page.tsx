@@ -6,28 +6,28 @@ const infoData = [
 
   {
     icon: <RiRidingFill size={20} />,
-    text: 'Mrs Smith',
+    text: 'MD:SHOHIDUL PRAMANIK',
   },
   {
     icon: <RiUserHeartFill size={20} />,
-    text: '+91 99 787 7761',
+    text: '01758225368',
   },
   {
     icon: <RiStarHalfSLine size={20} />,
-    text: 'photography@gamil.com',
+    text: 'shohidulpramanik94@gmail.com',
   },
   {
     icon: <RiVidiconFill size={20} />,
-    text: 'Bath on 23 jan, 2003',
+    text: 'Bath on 02 jan, 2003',
   },
   {
     icon: <RiVipCrown2Fill size={20} />,
-    text: 'Master Degree',
+    text: 'Higher Secondary Certificate (HSC) Institution: Gosaibri College, Bogura',
   },
 
   {
     icon: <Ri24HoursFill size={20} />,
-    text: '22, Ella Statu, Texas, US',
+    text: 'Sherpur,Dhunat,Bogra',
   },
 ]
 
@@ -44,26 +44,28 @@ const About = () => {
           {/* image */}
           <div className='relative flex-1 xl:flex'>
             <Fade direction='left' delay={600} cascade damping={1e-1} triggerOnce={true}>
-              <HeroImg imgSrc='https://res.cloudinary.com/djhjt07rh/image/upload/v1713904914/437585332_976969253793270_3287469938990990648_n_dtckaj.jpg' 
-              containerStyles='relative overflow-x-hidden' />
+              <HeroImg imgSrc='https://res.cloudinary.com/djhjt07rh/image/upload/v1713904914/437585332_976969253793270_3287469938990990648_n_dtckaj.jpg'
+                containerStyles='relative overflow-x-hidden' />
             </Fade>
           </div>
           <div className="flex-1">
             <div className="text-xl mt-12 xl:mt-3">
               <div className="text-center xl:text-left">
                 <Fade direction='right' delay={400} cascade damping={1e-1} triggerOnce={true}>
-                  <h3 className="h3 mb-4">Let&copy;s plan your perfect photoshoot</h3>
+                  <h3 className="h3 mb-4">Let&copy;s Plan Your Perfect Web Project</h3>
                 </Fade>
                 <Fade direction='right' delay={600} cascade damping={1e-1} triggerOnce={true}>
-                  <p className="subtitle max-w-xl mx-auto xl:mx-0">Our mission is to futher develop the overall excellence of photography and to capture memories that will be cherished for a lifetimem, in the timeless photographs.</p>
+                  <p className="subtitle max-w-xl mx-auto xl:mx-0">
+                    Our mission is to further enhance the overall quality of web development by creating high-performance, user-centric websites and applications. We focus on delivering innovative digital solutions that will stand the test of time, ensuring your online presence is built to last.
+                  </p>
                 </Fade>
                 <Fade direction='right' delay={800} cascade damping={1e-1} triggerOnce={true}>
                   <p className="subtitle max-w-xl mx-auto xl:mx-0">
-                    Professional photography services combine the classic knowledge of traditional photographic portraiture and contemparary style.
+                    My services combine traditional web development best practices with contemporary design and modern technologies to create dynamic, engaging user experiences.
                   </p>
                 </Fade>
                 {/* icons */}
-                <div className="grid xl:grid-cols-2 gap-4 mb-12">
+                <div className="grid xl:grid-cols-20 gap-4 mb-12">
                   <Fade direction='right' delay={1000} cascade damping={1e-1} triggerOnce={true}>
                     {
                       infoData.map((item, index) => {
