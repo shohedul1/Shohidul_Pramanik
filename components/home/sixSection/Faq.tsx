@@ -46,7 +46,7 @@ const Faq = () => {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent>
-                    Let me explain how the idea of mastering coding practices and building efficient systems evolved. I will provide you with a detailed account of the process I follow to create reliable and innovative web solutions."
+                    Let me explain how the idea of mastering coding practices and building efficient systems evolved. I will provide you with a detailed account of the process I follow to create reliable and innovative web solutions.
 
                     This version adapts the original sentence to a web development context. Let me know if you need more revisions!
                   </AccordionContent>
