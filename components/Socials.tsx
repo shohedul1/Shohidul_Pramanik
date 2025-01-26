@@ -10,7 +10,7 @@ import { FaGithub } from "react-icons/fa6";
 
 const icons = [
     { id: 'github', path: "https://github.com/shohedul1", name: <FaGithub /> },
-    { id: 'whatsapp', path: 'https://wa.me/01758225368', name: <FaWhatsapp /> },
+    { id: 'whatsapp', path: 'https://wa.me/8801758225368', name: <FaWhatsapp /> }, // Updated
     { id: 'facebook', path: 'https://www.facebook.com/sshohedul.islam', name: <RiFacebookFill /> },
     { id: 'linkedin', path: 'https://www.linkedin.com/in/shohedul-pramanik-5b8273318', name: <FaLinkedin /> },
 ];
