@@ -23,7 +23,6 @@ const Hero = () => {
   const photography = 'text-6xl uppercase font-semibold mb-4 text-primary tracking-[4px] bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text ';
   const subtitle = 'subtile max-w-[590px] mt-4 mx-auto xl:mx-0';
   const subcribeButtonDiv = 'flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12 mt-4';
-  const containerStyle = "";
   const iconsStyles = 'text-foreground text-[22px] hover:text-primary transition-all';
 
 
@@ -85,9 +84,8 @@ const Hero = () => {
           {/* benner image */}
           <Fade direction='right' delay={600} cascade damping={1e-1} triggerOnce={true}>
             <div className='xl:flex hidden relative '>
-              <HeroImg imgSrc='/about/shohidul_Pramanik.jpg' containerStyles='w-[475px] bg-no-repeat relative bg-bottom ' />
+              <Image alt='shohidul Pramanik' src={"/about/shohidul_Pramanik.jpg"} width={500} height={500} />
             </div>
-
           </Fade>
         </div>
         {/* badge section */}

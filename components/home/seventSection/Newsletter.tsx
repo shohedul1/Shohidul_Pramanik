@@ -13,7 +13,6 @@ import { RiMenFill } from 'react-icons/ri'
 
 const Newsletter = () => {
     const grid = 'mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2';
-    const title = 'text-3xl font-bold tracking-tight section-title sm:text-4xl';
     return (
         <section>
             <div className='relative bg-tertiary overflow-hidden py-16 sm:py-24 lg:py-32'>
@@ -22,14 +21,14 @@ const Newsletter = () => {
                     <div className={grid}>
                         <div className='max-w-xl lg:max-w-lg'>
                             <Fade direction='left' delay={400} cascade damping={1e-1} triggerOnce={true}>
-                                <h2 className={title} >
-                                    Need a Photographer
+                                <h2 className="text-4xl" >
+                                    Web Knowledge
                                 </h2>
                             </Fade>
 
                             <Fade direction='left' delay={600} cascade damping={1e-1} triggerOnce={true}>
                                 <p className='mt-4 text-lg leading-8 subtitle'>
-                                    But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete accout of the system, and expound the actual teaching s of the great explorer of the truth, the master-builder of human happiness.
+                                    Want to master full-stack development? Get the latest insights on MERN stack, React best practices, and real-world projects delivered straight to your inbox.
                                 </p>
                             </Fade>
 
@@ -59,10 +58,10 @@ const Newsletter = () => {
                                     <div className='bg-primary p-2 ring-1 ring-white/10 rounded-full'>
                                         <CalendarDaysIcon className='h-6 w-6 text-white' />
                                     </div>
-                                    <dt className='mt-4 font-semibold text-muted-foreground'>Weekly articles</dt>
+                                    <dt className='mt-4 font-semibold text-muted-foreground'>Data Protection
+                                    </dt>
                                     <dd className='mt-2 leading-7'>
-                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque quas quos adipisci et culpa error dolores assumenda enim vero debitis!
-
+                                        Learn about modern security practices, data privacy techniques, and strategies to keep your applications safe from cyber threats
                                     </dd>
                                 </div>
                             </Fade>
@@ -71,10 +70,11 @@ const Newsletter = () => {
                                     <div className='bg-primary p-2 ring-1 ring-white/10 rounded-full'>
                                         <HandRaisedIcon className='h-6 w-6 text-white' />
                                     </div>
-                                    <dt className='mt-4 font-semibold text-muted-foreground'>Full Security</dt>
+                                    <dt className='mt-4 font-semibold text-muted-foreground'>
+                                        Tech Insights
+                                    </dt>
                                     <dd className='mt-2 leading-7'>
-                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque quas quos adipisci et culpa error dolores assumenda enim vero debitis!
-
+                                        Stay updated with the latest trends in web development, programming languages, and emerging technologies to enhance your skills.
                                     </dd>
                                 </div>
 

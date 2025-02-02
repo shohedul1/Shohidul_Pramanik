@@ -8,7 +8,7 @@ import Features from "@/components/home/towSection/Features";
 
 export default function Home() {
   return (
-    <main>
+    <main >
       <Hero/>
       <Features/>
       <Services/>
