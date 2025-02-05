@@ -89,9 +89,11 @@ const Hero = () => {
           </Fade>
         </div>
         {/* badge section */}
+        {/* py-24 sm:py-32 xl:translate-y-0 -translate-y-20 */}
         <div className='py-24 sm:py-32 xl:translate-y-0 -translate-y-20'>
-          <div className='mx-auto max-w-7xl px-6 lg:px-8'>
-            <dl className='grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3'>
+        {/* mx-auto max-w-7xl px-6 lg:px-8 */}
+          <div className='flex items-center justify-center'>
+            <div className='grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3'>
               <Fade direction='up' delay={800} cascade damping={1e-1} triggerOnce={true}>
                 {/* badge 1 */}
                 <div className='mx-auto flex max-w-xs flex-col gap-y-4'>
@@ -128,7 +130,7 @@ const Hero = () => {
                 </div>
               </Fade>
 
-            </dl>
+            </div>
           </div>
         </div>
       </div>

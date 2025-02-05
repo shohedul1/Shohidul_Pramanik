@@ -82,7 +82,7 @@ const About = () => {
             <div className="text-xl mt-12 xl:mt-3">
               <div className="">
                 <Fade direction='right' delay={400} cascade damping={1e-1} triggerOnce={true}>
-                  <h3 className="h3 mb-4 text-start">
+                  <h3 className="text-3xl mb-4 text-start">
                     Let&copy;s Build Your Perfect Web Project
                   </h3>
                 </Fade>
