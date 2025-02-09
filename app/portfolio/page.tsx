@@ -10,10 +10,10 @@ const projectData = [
   {
     image: '/work/3.png',
     category: 'portraits',
-    name: "Portrait: Macro Allian",
-    description: 'Shoot Data: 08/01/2024',
-    link: '/',
-    codepen: '/'
+    name: "Landing Page Desing",
+    description: 'Shoot Data: 11/01/2017',
+    link: 'https://awwwards-six.vercel.app',
+    codepen: 'https://awwwards-six.vercel.app',
   },
   {
     image: '/work/9.png',

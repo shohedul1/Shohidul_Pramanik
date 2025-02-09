@@ -5,6 +5,7 @@ import { Card, CardHeader } from "@/components/ui/card";
 import { Link2Icon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 interface Project {
     image: string;
@@ -16,11 +17,13 @@ interface Project {
 }
 
 const ProjectCart: React.FC<{ project: Project }> = ({ project }) => {
+    const link = project.link || project.codepen
+    const router = useRouter()
     const mainDiv = "relative w-full h-[290px] flex items-center justify-center dark:bg-secondary/40 xl:bg-[100%] xl:bg-no-repeat overflow-hidden";
     const ImageSyle = "absolute top-0 shadow-2xl hover:scale-110 transition-all";
     const linkSyle = "bg-secondary dark:bg-black w-[55px] h-[55px] flex justify-center items-center rounded-full scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-50 duration-200 transition-all"
     const badgeSyle = "uppercase text-sm font-medium mb-2 absolute top-4 left-5";
-    
+
     return (
         <Card className="group overflow-hidden relative">
             <CardHeader className="p-0">
@@ -34,16 +37,22 @@ const ProjectCart: React.FC<{ project: Project }> = ({ project }) => {
                         className={ImageSyle}
                     />
                     <div className="flex gap-x-4">
-                        <Link
-                            className={linkSyle}
-                            href={project.link}>
+                        <div
+                             onClick={() => {
+                                window.open(project.codepen, '_blank', 'noopener noreferrer');
+                            }}
+                            rel="noopener noreferrer"
+                            className={linkSyle}       >
                             <Link2Icon />
-                        </Link>
-                        <Link
+                        </div>
+                        <div
+                            onClick={() => {
+                                window.open(project.codepen, '_blank', 'noopener noreferrer');
+                            }}
                             className={linkSyle}
-                            href={project.codepen}>
+                            rel="noopener noreferrer">
                             <Link2Icon />
-                        </Link>
+                        </div>
                     </div>
                 </div>
             </CardHeader>
