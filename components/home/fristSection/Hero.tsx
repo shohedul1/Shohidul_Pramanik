@@ -66,14 +66,15 @@ const Hero = () => {
                 <Socials containerStyle={"flex gap-x-6 mx-auto xl:mx-0 "} iconsStyles={iconsStyles} />
               </Fade>
               <div className='xl:hidden flex translate-x-[10%] -translate-y-1/2 '>
-                <Fade direction='up' delay={420} cascade damping={1e-1} triggerOnce={true}>
-                  <div>
-                    <Image
-                      width={500}
-                      height={500}
-                      src={'/about/shohidul_Pramanik.jpg'}
-                      alt='shohidul_Icon'
-                      className='w-40 h-40 rounded-full bg-no-repeat object-cover hover:scale-110 transition-all duration-500  '
+
+                <Fade direction="up" delay={420} cascade damping={0.1} triggerOnce={true}>
+                  <div className="w-40 h-40 rounded-full overflow-hidden">
+                    <video
+                      src="/about/Shohidul_Pramanick.mp4"
+                      className="w-full h-full object-cover hover:scale-110 transition-all duration-500"
+                      autoPlay
+                      loop
+                      muted
                     />
                   </div>
                 </Fade>
@@ -82,16 +83,26 @@ const Hero = () => {
 
           </div>
           {/* benner image */}
-          <Fade direction='right' delay={600} cascade damping={1e-1} triggerOnce={true}>
-            <div className='xl:flex hidden relative '>
-              <Image alt='shohidul Pramanik' src={"/about/shohidul_Pramanik.jpg"} width={500} height={500} />
+
+          <Fade direction="right" delay={600} cascade damping={0.1} triggerOnce={true}>
+            <div className="xl:flex hidden relative">
+              <video
+                src="/about/Shohidul_Pramanick.mp4"
+                width={500}
+                height={500}
+                className="rounded-xl"
+                loop
+                controls
+              />
             </div>
           </Fade>
+
+
         </div>
         {/* badge section */}
         {/* py-24 sm:py-32 xl:translate-y-0 -translate-y-20 */}
         <div className='py-24 sm:py-32 xl:translate-y-0 -translate-y-20'>
-        {/* mx-auto max-w-7xl px-6 lg:px-8 */}
+          {/* mx-auto max-w-7xl px-6 lg:px-8 */}
           <div className='flex items-center justify-center'>
             <div className='grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3'>
               <Fade direction='up' delay={800} cascade damping={1e-1} triggerOnce={true}>
