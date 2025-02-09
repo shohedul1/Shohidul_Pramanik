@@ -8,15 +8,15 @@ import Features from "@/components/home/towSection/Features";
 
 export default function Home() {
   return (
-    <main >
-      <Hero/>
-      <Features/>
-      <Services/>
-      <Gallery/>
-      <Reviews/>
-      <Faq/>
-      <Newsletter/>
-      
+    <main>
+      <Hero />
+      <Features />
+      <Services />
+      <Gallery />
+      <Reviews />
+      <Faq />
+      <Newsletter />
+
     </main>
   );
 }

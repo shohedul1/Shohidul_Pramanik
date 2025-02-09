@@ -26,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${SenFont.className} overflow-x-hidden`}>
+      <body className={`${SenFont.className} overflow-x-hidden `}>
        
         <ThemeProvider attribute="class"
         defaultTheme="light"
