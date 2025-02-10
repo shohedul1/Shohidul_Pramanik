@@ -8,7 +8,7 @@ import { Fade } from "react-awesome-reveal";
 
 const projectData = [
   {
-    image: '/work/3.png',
+    image: '/work/awwwards.png',
     category: 'portraits',
     name: "Landing Page Desing",
     description: 'Shoot Data: 11/01/2017',
@@ -16,15 +16,15 @@ const projectData = [
     codepen: 'https://awwwards-six.vercel.app',
   },
   {
-    image: '/work/9.png',
+    image: '/work/travel.png',
     category: 'portraits',
-    name: "Portrait: Mark Adam",
+    name: "Travel web app",
     description: 'Shoot Data: 11/01/2017',
     link: 'https://travel-theta-liart.vercel.app',
     codepen: 'https://travel-theta-liart.vercel.app/'
   },
   {
-    image: '/work/2.png',
+    image: '/work/Food_Web.png',
     category: 'product',
     name: "Food desing lending page",
     description: 'Shoot Data: 08/01/2024',
@@ -32,7 +32,7 @@ const projectData = [
     codepen: 'https://mern-food-app-two.vercel.app'
   },
   {
-    image: '/work/4.png',
+    image: '/work/Job_web.png',
     category: 'portraits',
     name: "Job desing platfrom",
     description: 'is a long established fact that a reader will be distracted ',
@@ -40,7 +40,7 @@ const projectData = [
     codepen: 'https://job-board-tau-ten.vercel.app/find-jobs'
   },
   {
-    image: '/work/5.png',
+    image: '/work/Template.png',
     category: 'portraits',
     name: "Langing page",
     description: 'Shoot Data: 09/03/2024',
@@ -48,7 +48,7 @@ const projectData = [
     codepen: 'https://desing.vercel.app'
   },
   {
-    image: '/work/11.png',
+    image: '/work/benner.png',
     category: 'Fashion',
     name: "Mordan Landing page",
     description: 'Shoot Data: 13/01/2024',
@@ -56,7 +56,7 @@ const projectData = [
     codepen: 'https://building-a-responsive-hosting-website.vercel.app'
   },
   {
-    image: '/work/11.png',
+    image: '/work/Lingo.png',
     category: 'Fashion',
     name: "Mordan web code page",
     description: 'Shoot Data: 13/01/2024',
@@ -64,7 +64,7 @@ const projectData = [
     codepen: 'https://lingo-lac.vercel.app'
   },
   {
-    image: '/work/11.png',
+    image: '/work/agance.png',
     category: 'Fashion',
     name: "Heart coding",
     description: 'Shoot Data: 13/01/2024',
@@ -72,7 +72,7 @@ const projectData = [
     codepen: 'https://agency-website-ebon.vercel.app/'
   },
   {
-    image: '/work/11.png',
+    image: '/work/loom.png',
     category: 'Fashion',
     name: "Heighly Web desing",
     description: 'Shoot Data: 13/01/2024',
@@ -80,7 +80,7 @@ const projectData = [
     codepen: 'https://loom-three.vercel.app'
   },
   {
-    image: '/work/11.png',
+    image: '/work/FigmaConvert.png',
     category: 'Fashion',
     name: "Mordan web DESING",
     description: 'Shoot Data: 13/01/2024',
@@ -88,15 +88,15 @@ const projectData = [
     codepen: 'https://figma-convert.vercel.app'
   },
   {
-    image: '/work/11.png',
+    image: '/work/Job_Template.png',
     category: 'Fashion',
     name: "Mordan Job web",
     description: 'Shoot Data: 13/01/2024',
     link: 'https://jobportalyt.vercel.app',
-    codepen: ''
+    codepen: 'https://jobportalyt.vercel.app'
   },
   {
-    image: '/work/11.png',
+    image: '/work/Blogweb.png',
     category: 'Fashion',
     name: "Mordan Bloging web",
     description: 'Shoot Data: 13/01/2024',
@@ -104,7 +104,7 @@ const projectData = [
     codepen: 'https://next-js-blog-mern-application.vercel.app'
   },
   {
-    image: '/work/11.png',
+    image: '/work/BlogAPP.png',
     category: 'Fashion',
     name: "Mordan technology",
     description: 'Shoot Data: 13/01/2024',
@@ -112,7 +112,7 @@ const projectData = [
     codepen: 'https://nft-next-js-shop.vercel.app'
   },
   {
-    image: '/work/11.png',
+    image: '/work/Ecommerce.png',
     category: 'Fashion',
     name: "Ecommerce desing web app",
     description: 'Shoot Data: 13/01/2024',
@@ -120,7 +120,7 @@ const projectData = [
     codepen: 'https://ecommer-desing.vercel.app'
   },
   {
-    image: '/work/11.png',
+    image: '/work/bookStore.png',
     category: 'Fashion',
     name: "Mordan BOOK STORE WEB app",
     description: 'Shoot Data: 13/01/2024',
@@ -128,7 +128,7 @@ const projectData = [
     codepen: 'https://vite-mern-stact.vercel.app'
   },
   {
-    image: '/work/11.png',
+    image: '/work/Movide.png',
     category: 'Fashion',
     name: "Mordan Movie web app",
     description: 'Shoot Data: 13/01/2024',
@@ -136,7 +136,7 @@ const projectData = [
     codepen: 'https://vite-movie-three.vercel.app'
   },
   {
-    image: '/work/11.png',
+    image: '/work/Tranquind.png',
     category: 'Fashion',
     name: "Mordan Portfolio my app",
     description: 'Shoot Data: 13/01/2024',
@@ -145,7 +145,7 @@ const projectData = [
   },
   
   {
-    image: '/work/11.png',
+    image: '/work/Ecommerce_web.png',
     category: 'Fashion',
     name: "Mordan Ecommerce web app",
     description: 'Shoot Data: 13/01/2024',
@@ -154,7 +154,7 @@ const projectData = [
   },
   
   {
-    image: '/work/11.png',
+    image: '/work/shopping.png',
     category: 'Fashion',
     name: "Shopping website",
     description: 'Shoot Data: 13/01/2024',
@@ -163,7 +163,7 @@ const projectData = [
   },
   
   {
-    image: '/work/11.png',
+    image: '/work/Ecommer_application.png',
     category: 'Fashion',
     name: "Mordan Ecommerce",
     description: 'Shoot Data: 13/01/2024',
@@ -172,7 +172,7 @@ const projectData = [
   },
   
   {
-    image: '/work/11.png',
+    image: '/work/Protfolio.png',
     category: 'Fashion',
     name: "Mordan Landing page",
     description: 'Shoot Data: 13/01/2024',
@@ -181,7 +181,7 @@ const projectData = [
   },
 
   {
-    image: '/work/11.png',
+    image: '/work/New_commerce.png',
     category: 'Fashion',
     name: "Mordan Ecommerce Template",
     description: 'Shoot Data: 13/01/2024',
@@ -189,7 +189,7 @@ const projectData = [
     codepen: 'https://shoppin-website.netlify.app'
   },
   {
-    image: '/work/11.png',
+    image: '/work/myProtfolio.png',
     category: 'Fashion',
     name: "Mordan Portfolio web app",
     description: 'Shoot Data: 13/01/2024',
@@ -198,15 +198,13 @@ const projectData = [
   },
   {
     
-    image: '/work/11.png',
+    image: '/work/game.png',
     category: 'Fashion',
     name: "Mordan gaming web app",
     description: 'Shoot Data: 13/01/2024',
     link: 'https://netshohidul2.netlify.app',
     codepen: 'https://netshohidul2.netlify.app'
   },
-  
-  
   
 ]
 
