@@ -32,7 +32,7 @@ const Services = () => {
         <section className="mb-12 xl:mb-36">
             <div className="container mx-auto xl:translate-y-0 -translate-y-20">
                 <Fade direction="up" delay={400} cascade damping={1e-1} triggerOnce={true}>
-                    <h2 className="section-title mb-12 xl:mb-24 text-center mx-auto">Our Services</h2>
+                    <h2 className="section-title mb-12 xl:mb-24 text-center mx-auto">My Services</h2>
                 </Fade>
 
                 {/* Services Grid */}
