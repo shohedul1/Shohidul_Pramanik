@@ -54,7 +54,7 @@ const projectData = [
     codepen: '/'
   },
   {
-    image: '/work/10.png',
+    image: '/work/9.png',
     category: 'Corporate',
     name: "Mar 11, 2023",
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum,moi',
@@ -62,7 +62,7 @@ const projectData = [
     codepen: '/'
   },
   {
-    image: '/work/11.png',
+    image: '/work/1.png',
     category: 'Models',
     name: "Oct 23, 2019",
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum,moi',

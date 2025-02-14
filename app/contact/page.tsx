@@ -7,7 +7,7 @@ import { Fade } from 'react-awesome-reveal';
 
 const Contact = () => {
   return (
-    <section className='min-h-screen'>
+    <section className='min-h-screen overflow-hidden'>
       <div className='container mx-auto'>
         <div className='grid xl:grid-cols-2 pt-12 mb-6 xl:mb-24'>
           {/* left content */}
