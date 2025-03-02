@@ -6,11 +6,16 @@ import { RiMenFill, RiBookmark3Fill, RiBodyScanFill, RiServiceFill } from 'react
 import { Button } from '../../ui/button'
 import Socials from '../../Socials'
 import Badge from './Badge'
-import {  toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
 //react awesome reveal animation
 import { Fade } from "react-awesome-reveal";
 import Notification from '@/components/Notification/Notification';
+import TypeWriter from './TypeWriter';
+import { motion } from "framer-motion";
+import Link from 'next/link';
+
+
 
 
 
@@ -38,19 +43,21 @@ const Hero = () => {
   };
 
 
-
-
   const mainDiv = 'flex max-w-[800px] flex-col justify-center mx-auto xl:mx-0 text-center xl:text-left';
   const photography = 'text-6xl uppercase font-semibold mb-4 text-primary tracking-[4px] bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text ';
-  const subtitle = 'subtile max-w-[590px] mt-4 mx-auto xl:mx-0';
+  const subtitle = 'subtile max-w-[590px] text-xl mt-4 mx-auto xl:mx-0';
   const subcribeButtonDiv = 'flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12 mt-4';
   const iconsStyles = 'text-foreground text-[22px] hover:text-primary transition-all';
 
 
   return (
     <>
-      <section className='py-12 xl:py-24 h-[auto] bg-bottom'>
+      <section className='h-[auto] bg-bottom'>
         <div className='container mx-auto'>
+          {
+            <TypeWriter />
+          }
+
           <div className='flex flex-col md:flex-row justify-between gap-x-8 '>
             {/* lef side  */}
             <div className={mainDiv}>
@@ -58,12 +65,28 @@ const Hero = () => {
                 <div className={photography}>Web Coder</div>
               </Fade>
               <Fade direction='up' delay={620} cascade damping={1e-1} triggerOnce={true}>
-                <h1 className='text-5xl'>Let&apos;s make magic !</h1>
+                <h1 className='text-3xl'>Let&apos;s make web Application !</h1>
               </Fade>
+
               <Fade direction='up' delay={800} cascade damping={1e-1} triggerOnce={true}>
-                <p className={subtitle}>
-                  We are passionate MERN stack web developers from San Francisco, with a special love for clean code, intuitive user experiences, and building dynamic full-stack applications with modern tools like React, Node.js, and MongoDB
-                </p>
+                <div className='flex flex-col gap-5'>
+                  <p className={subtitle}>
+                    Get a Live Preview Before Delivery  Order Now and Grow Your Business!
+                    {/* We are passionate MERN stack web developers from San Francisco, with a special love for clean code, intuitive user experiences, and building dynamic full-stack applications with modern tools like React, Node.js, and MongoDB */}
+                  </p>
+                  <div>
+                    <motion.button
+                      whileHover={{ scale: 1.1 }}
+                      animate={{ y: [0, -5, 0] }}
+                      transition={{ repeat: Infinity, duration: 1, ease: "easeInOut" }}
+                    >
+                      <Link href={"/contact"} className='hover:bg-black hover:text-white dark:hover:bg-lime-500 dark:hover:text-white dark:bg-blue-600 px-4 py-2 bg-red-300 rounded-md '>
+                        Contact Now
+                      </Link>
+                    </motion.button>
+                  </div>
+
+                </div>
               </Fade>
               {/* subcribs input and button section  */}
               <Fade direction='up' delay={1000} cascade damping={1e-1} triggerOnce={true}>

@@ -1,7 +1,5 @@
 'use client';
-import HeroImg from "@/components/home/fristSection/HeroImg";
 import { Fade } from "react-awesome-reveal";
-import Typewriter from 'typewriter-effect';
 import { RiRidingFill, RiUserHeartFill, RiStarHalfSLine, RiVidiconFill, RiVipCrown2Fill, Ri24HoursFill } from "react-icons/ri";
 import Image from "next/image";
 const infoData = [
@@ -51,26 +49,6 @@ const About = () => {
         <Fade direction='up' delay={400} cascade damping={1e-1} triggerOnce={true}>
           <h2 className={title}>About me</h2>
         </Fade>
-        <div className="text-lg font-bold">
-          <Typewriter
-            options={{
-              strings: [
-                '<span class="text-white">Proficient in React.js, Next.js, TailwindCSS, and TypeScript, ensuring highly interactive and optimized UI/UX design</span>',
-                '<span class="text-blue-400">Backend Development: Skilled in Node.js, Express.js, and MongoDB to build secure and scalable server-side applications.</span>',
-                '<span class="text-red-400">API and Security: Experienced in RESTful APIs, authentication systems (JWT, OAuth), and web security best practices.</span>',
-                '<span class="text-lime-400">Performance Optimization: I focus on fast loading speeds, SEO optimization, and responsive design for enhanced user experience.</span>',
-                '<span class="text-yellow-400">Project Deployment: Familiar with Vercel, Render, and Firebase, ensuring efficient and reliable hosting solutions.</span>'
-
-              ],
-              autoStart: true,
-              loop: true,
-              delay: 50,
-              deleteSpeed: 10,
-              wrapperClassName: "custom-typewriter"
-            }}
-          />
-        </div>
-
         <div className="flex flex-col gap-20 xl:flex-row">
           {/* image */}
           <div className='relative flex-1 xl:flex'>
