@@ -35,7 +35,7 @@ const SwiperSlider = () => {
                                 {languages.map((language) => (
                                     <SwiperSlide
                                         key={language.id}
-                                        className="swiper_slider flex flex-col items-center justify-center text-white text-lg sm:text-2xl font-semibold p-6 rounded-full shadow-lg"
+                                        className="swiper_slider flex flex-col items-center justify-center  text-white text-lg sm:text-2xl font-semibold p-6 rounded-full shadow-lg"
                                         style={{ backgroundColor: language.bgColor }}
                                     >
                                         <div className='flex items-center justify-center'>

@@ -12,7 +12,7 @@ import { Toaster } from "@/components/ui/toaster"
 
 
 
-const SenFont = Sen({ subsets: ["latin"],weight: ['400','600','700',],display: 'swap' });
+const SenFont = Sen({ subsets: ["latin"], weight: ['400', '600', '700',], display: 'swap' });
 
 export const metadata: Metadata = {
   title: "Shohidul Pramanik",
@@ -27,14 +27,16 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${SenFont.className} overflow-x-hidden `}>
-       
+
         <ThemeProvider attribute="class"
-        defaultTheme="light"
-        enableSystem
-        disableTransitionOnChange>
+          defaultTheme="light"
+          enableSystem
+          disableTransitionOnChange>
           <Header />
-          {children}
-          <Footer />
+            {children}
+           <div className="container">
+           <Footer />
+           </div>
           <Toaster />
         </ThemeProvider>
       </body>
