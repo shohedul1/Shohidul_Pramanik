@@ -16,12 +16,8 @@ const Hero = () => {
           <div className="grid grid-cols-1  xl:grid-cols-2  gap-12 md:gap-5 ">
             <FirstDesing />
           </div>
-          <div className="text-center sm:text-left">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mt-10">
-              All Client Subscription
-            </h2>
-          </div>
-          <ClientSubcribe />
+           
+            <ClientSubcribe />
 
         </div>
       </section>

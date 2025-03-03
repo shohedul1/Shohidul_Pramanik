@@ -2,6 +2,7 @@ import { Fade } from "react-awesome-reveal";
 import { motion } from "framer-motion";
 import Link from 'next/link';
 import Sebscribe from "./Sebscribe";
+import Button from "@/components/button/Button";
 
 const FirstDesing = () => {
     return (
@@ -24,17 +25,14 @@ const FirstDesing = () => {
                             </p>
 
                             <div className="flex justify-center gap-8 sm:gap-10">
+
+
                                 <motion.button
                                     whileHover={{ scale: 1.1 }}
                                     animate={{ y: [0, -5, 0] }}
                                     transition={{ repeat: Infinity, duration: 1, ease: "easeInOut" }}
                                 >
-                                    <Link
-                                        href="/contact"
-                                        className="hover:bg-black hover:text-white dark:hover:bg-lime-500 dark:hover:text-white dark:bg-blue-600 px-4 py-2 bg-red-300 rounded-md"
-                                    >
-                                        Contact Now
-                                    </Link>
+                                   <Button text="Contact Now" href="/contact"/>
                                 </motion.button>
                                 <motion.button
                                     whileHover={{ scale: 1.1 }}

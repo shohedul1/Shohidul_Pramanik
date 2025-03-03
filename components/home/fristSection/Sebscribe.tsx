@@ -2,12 +2,10 @@
 import React, { useState } from 'react'
 import { Input } from '../../ui/input'
 import { Label } from '../../ui/label'
-import { RiMenFill } from 'react-icons/ri'
-import { Button } from '../../ui/button'
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
-//react awesome reveal animation
 import { Fade } from "react-awesome-reveal";
+import SubscriptButton from '@/components/button/SubscriptButton';
 
 const Sebscribe = () => {
     const [email, setEmail] = useState('');
@@ -50,9 +48,8 @@ const Sebscribe = () => {
                                     setEmail(e.target.value);
                                 }}
                             />
-                            <Button type='submit' className='gap-x-2 bg-black'>
-                                Subscribe <RiMenFill size={18} />
-                            </Button>
+                            
+                            <SubscriptButton type={"submit"} text='Subscribe'/>
 
                         </div>
                         {/* socials icons */}

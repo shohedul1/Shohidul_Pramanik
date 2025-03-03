@@ -1,15 +1,9 @@
 'use client';
-//react awesome reveal animation
 import { Fade } from "react-awesome-reveal";
-
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { Label } from '@/components/ui/label'
 import { HandRaisedIcon } from '@heroicons/react/24/solid'
 import { CalendarDaysIcon } from 'lucide-react'
-import Link from 'next/link'
 import React from 'react'
-import { RiMenFill } from 'react-icons/ri'
+import Sebscribe from "../fristSection/Sebscribe";
 
 const Newsletter = () => {
     const grid = 'mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2';
@@ -33,22 +27,7 @@ const Newsletter = () => {
                             </Fade>
 
                             <Fade direction='left' delay={800} cascade damping={1e-1} triggerOnce={true}>
-                                <div className='mt-6 flex max-w-md gap-x-4'>
-                                    <Label className='sr-only'>Email Address</Label>
-                                    <Input
-                                        id='email-address'
-                                        name='email'
-                                        type='email'
-                                        autoComplete='email'
-                                        required
-                                        placeholder='Enter your email'
-                                    />
-                                    <Link href={'/contact'}>
-                                        <Button>
-                                            Subscribe <RiMenFill size={18} />
-                                        </Button>
-                                    </Link>
-                                </div>
+                                <Sebscribe />
                             </Fade>
 
                         </div>
