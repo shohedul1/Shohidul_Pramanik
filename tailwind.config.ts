@@ -67,27 +67,27 @@ const config = {
         sm: 'calc(var(--radius) - 4px)'
       },
       keyframes: {
-        'accordion-down': {
-          from: {
-            height: '0'
-          },
-          to: {
-            height: 'var(--radix-accordion-content-height)'
-          }
-        },
-        'accordion-up': {
-          from: {
-            height: 'var(--radix-accordion-content-height)'
-          },
-          to: {
-            height: '0'
-          }
-        },
-      },
-      animation: {
-        'accordion-down': 'accordion-down 0.2s ease-out',
-        'accordion-up': 'accordion-up 0.2s ease-out',
-      }
+  			customSpin: {
+  				'0%': {
+  					transform: 'rotate(0deg)'
+  				},
+  				'25%': {
+  					transform: 'rotate(90deg)'
+  				},
+  				'50%': {
+  					transform: 'rotate(180deg)'
+  				},
+  				'75%': {
+  					transform: 'rotate(270deg)'
+  				},
+  				'100%': {
+  					transform: 'rotate(360deg)'
+  				}
+  			}
+  		},
+  		animation: {
+  			'custom-spin': 'customSpin 3s linear infinite'
+  		},
     }
   },
   plugins: [require("tailwindcss-animate")],

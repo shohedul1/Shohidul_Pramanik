@@ -34,7 +34,7 @@ const Features = () => {
   const iconStyle = 'flex flex-col w-[100px] h-[100px] bg-primary rounded-full items-center justify-center mb-4';
 
   return (
-    <section className='pb-12 xl:py-12 -translate-y-28'>
+    <section className='pb-12 xl:py-12 '>
       <div className='container mx-auto '>
         <Fade direction='up' delay={400} cascade damping={1e-1} triggerOnce={true}>
           <h2 className={title}>Key Features</h2>
