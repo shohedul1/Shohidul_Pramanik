@@ -11,8 +11,13 @@ const Services = () => {
         <section className="my-10 px-4">
             <div className="container mx-auto flex flex-col gap-10 overflow-hidden">
                 <SwiperSlider />
-                <Fade direction="up" delay={400} cascade damping={1e-1} triggerOnce={true}>
-                    <h2 className="section-title text-center mx-auto text-2xl sm:text-3xl md:text-4xl font-bold">My Services</h2>
+
+                <Fade direction="up" delay={420} cascade damping={0.1} triggerOnce>
+                    <div className="flex items-center justify-center">
+                        <div className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl uppercase font-semibold mb-4 tracking-[4px] bg-gradient-to-r text-center from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text ">
+                            My Services
+                        </div>
+                    </div>
                 </Fade>
                 <div className="flex flex-col gap-10 relative">
                     {/* Programming Languages Section */}

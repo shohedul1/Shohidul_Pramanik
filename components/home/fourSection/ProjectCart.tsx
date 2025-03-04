@@ -4,7 +4,6 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardHeader } from "@/components/ui/card";
 import { Link2Icon } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 interface Project {
@@ -17,8 +16,6 @@ interface Project {
 }
 
 const ProjectCart: React.FC<{ project: Project }> = ({ project }) => {
-    const link = project.link || project.codepen
-    const router = useRouter()
     const mainDiv = "relative w-full h-[290px] flex items-center justify-center dark:bg-secondary/40 xl:bg-[100%] xl:bg-no-repeat overflow-hidden";
     const ImageSyle = "absolute top-0 shadow-2xl hover:scale-110 transition-all";
     const linkSyle = "bg-secondary dark:bg-black w-[55px] h-[55px] flex justify-center items-center rounded-full scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-50 duration-200 transition-all"
@@ -38,7 +35,7 @@ const ProjectCart: React.FC<{ project: Project }> = ({ project }) => {
                     />
                     <div className="flex gap-x-4">
                         <div
-                             onClick={() => {
+                            onClick={() => {
                                 window.open(project.codepen, '_blank', 'noopener noreferrer');
                             }}
                             rel="noopener noreferrer"

@@ -11,12 +11,16 @@ const Faq = () => {
     <section>
       <div className='container mx-auto'>
         <div className='w-full pt-12 mb-6 xl:mb-24'>
-          <Fade direction='up' delay={400} cascade damping={1e-1} triggerOnce={true}>
-            <h2 className='section-title mb-12 text-center mx-auto'>Our Studio</h2>
+          <Fade direction="up" delay={420} cascade damping={0.1} triggerOnce>
+            <div className="flex items-center justify-center">
+              <div className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl uppercase font-semibold mb-4 tracking-[4px] bg-gradient-to-r text-center from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text ">
+                Our Studio
+              </div>
+            </div>
           </Fade>
           <div>
             <Fade direction='up' delay={600} cascade damping={1e-1} triggerOnce={true}>
-              <Accordion type='single' collapsible className='w-full'>
+              <Accordion type='single' collapsible className='w-full text-black'>
                 <AccordionItem value='item-1'>
                   <AccordionTrigger>
                     <div className='ms-3'>

@@ -44,7 +44,7 @@ const infoData = [
 const About = () => {
   const title = "section-title mb-8 xl:mb-8 text-center mx-auto  ";
   return (
-    <section className="py-5 min-h-screen mb-2 border-b-2 border-red-400 shadow-xl shadow-blue-600 overflow-hidden bg-black text-white rounded-t-[25px] rounded-b-[50px]">
+    <section className="py-5 min-h-screen mb-2 border-b-2 border-red-400 shadow-xl  overflow-hidden  shadow-blue-600 text-white rounded-t-[25px] rounded-b-[50px]">
       <div className="container">
         <Fade direction='up' delay={400} cascade damping={1e-1} triggerOnce={true}>
           <h2 className={title}>About me</h2>

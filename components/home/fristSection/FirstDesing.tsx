@@ -15,12 +15,12 @@ const FirstDesing = () => {
                         </div>
                     </Fade>
                     <Fade direction="up" delay={620} cascade damping={0.1} triggerOnce>
-                        <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl text-center">Let&apos;s make web Application!</h1>
+                        <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl text-center bg-gradient-to-r from-blue-600 via-red-500 to-indigo-400 inline-block text-transparent bg-clip-text">Let&apos;s make web Application!</h1>
                     </Fade>
 
                     <Fade direction="up" delay={800} cascade damping={0.1} triggerOnce>
                         <div className="flex flex-col gap-10">
-                            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-center">
+                            <p className="text-base text-black font-bold sm:text-lg md:text-xl lg:text-2xl text-center">
                                 Get a Live Preview Before Delivery. Order Now and Grow Your Business!
                             </p>
 

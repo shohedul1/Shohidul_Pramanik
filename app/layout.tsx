@@ -3,11 +3,7 @@ import { Sen } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/footer/Footer";
-
-// theme
 import { ThemeProvider } from "@/components/ThemeProvider ";
-// toast
-
 import { Toaster } from "@/components/ui/toaster"
 
 
@@ -27,16 +23,15 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${SenFont.className} overflow-x-hidden `}>
-
         <ThemeProvider attribute="class"
           defaultTheme="light"
           enableSystem
           disableTransitionOnChange>
           <Header />
-            {children}
-           <div className="container">
-           <Footer />
-           </div>
+          {children}
+          <div className="container">
+            <Footer />
+          </div>
           <Toaster />
         </ThemeProvider>
       </body>

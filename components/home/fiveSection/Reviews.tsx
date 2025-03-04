@@ -13,8 +13,6 @@ import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/ca
 import Image from 'next/image';
 
 
-
-
 const reviewsData = [
   {
     avatar: '/reviews/avatar-1.png',

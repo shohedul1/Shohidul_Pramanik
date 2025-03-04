@@ -37,9 +37,11 @@ const ClientSubcribe = () => {
 
     return (
         <div className='flex flex-col items-center justify-center'>
-            <p className="text-center text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold mt-6 mb-8">
-                All Client Subscription Review
-            </p>
+            <Fade direction='up' delay={900} cascade damping={1e-1} triggerOnce={true}>
+                <p className="text-center text-base bg-gradient-to-r from-blue-600 via-red-500 to-indigo-400 inline-block text-transparent bg-clip-text sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold mt-6 mb-8">
+                    All Client Subscription Review
+                </p>
+            </Fade>
             <div className='grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3'>
                 <Fade direction='up' delay={800} cascade damping={1e-1} triggerOnce={true}>
                     {badgeData.map((badge, index) => (

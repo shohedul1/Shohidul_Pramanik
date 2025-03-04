@@ -4,11 +4,9 @@ import Logo from './Logo';
 import MobileNav from './MobileNav';
 import Nav from './Nav';
 import { ModeToggle } from './ModeToggle'
-import { usePathname } from 'next/navigation';
 
 const Header = () => {
     const [header, setHeader] = useState(false);
-    const pathname = usePathname()
 
     useEffect(() => {
         const handleScroll = () => {
@@ -24,18 +22,18 @@ const Header = () => {
 
     return (
         <header className={`${header
-            ? 'py-4 bg-white shadow-lg dark:bg-accent dark:shadow-3xl'
+            ? 'py-4 bg-white  shadow-lg dark:bg-accent dark:shadow-3xl'
             : 'py-4 dark:bg-transparent'
-            } sticky top-0 z-30 transition-all ${pathname === '/' && 'bg-white'}`}>
+            } sticky top-0 z-30 transition-all bg-white'}`}>
             <div className='container mx-auto'>
                 <div className='flex justify-between items-center'>
                     <Logo />
                     <div className='flex items-center gap-x-6'>
                         <Nav
-                            className="hidden xl:flex gap-x-8 items-center"
-                            linkSyle='capitalize relative hover:text-primary transition-all'
-                            motionSyle='absolute left-0 bottom-0 h-[2px] bg-primary w-full'
+                            className="hidden xl:flex gap-2 items-center"
+                            linkStyle='capitalize relative hover:text-primary transition-all'
                         />
+
                         <ModeToggle />
                         <div className='xl:hidden'>
                             <MobileNav />
