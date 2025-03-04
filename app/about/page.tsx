@@ -42,12 +42,15 @@ const infoData = [
 
 
 const About = () => {
-  const title = "section-title mb-8 xl:mb-8 text-center mx-auto  ";
   return (
-    <section className="py-5 min-h-screen mb-2 border-b-2 border-red-400 shadow-xl  overflow-hidden  shadow-blue-600 text-white rounded-t-[25px] rounded-b-[50px]">
+    <section className="py-5 min-h-screen mb-2 border-b-2 border-red-400 shadow-xl  overflow-hidden  shadow-blue-600 text-black  rounded-t-[25px] rounded-b-[50px]">
       <div className="container">
-        <Fade direction='up' delay={400} cascade damping={1e-1} triggerOnce={true}>
-          <h2 className={title}>About me</h2>
+        <Fade direction="up" delay={420} cascade damping={0.1} triggerOnce>
+          <div className="flex items-center justify-center">
+            <div className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl uppercase font-semibold mb-4 tracking-[4px] bg-gradient-to-r text-center from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
+              About Me
+            </div>
+          </div>
         </Fade>
         <div className="flex flex-col gap-20 xl:flex-row">
           {/* image */}
@@ -65,7 +68,7 @@ const About = () => {
                   </h3>
                 </Fade>
                 <Fade direction='right' delay={600} cascade damping={1e-1} triggerOnce={true}>
-                  <p className="  text-white text-start">
+                  <p className=" text-start">
                     I am MD. Shohidul Pramanik, a passionate web developer dedicated to creating high-performance, user-centric applications. My expertise lies in designing and developing modern, scalable, and responsive web solutions that ensure a seamless user experience.
                   </p>
                 </Fade>

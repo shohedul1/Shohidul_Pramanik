@@ -14,13 +14,17 @@ const includedFeatures = [
 ]
 
 const Pricing = () => {
-  const title = 'section-title mb-8 xl:mb-16 text-center mx-auto';
 
   return (
-    <section className='min-h-screen pt-12 pb-20'>
+    <section className='min-h-screen pt-12 pb-20 text-black'>
       <div className='container mx-auto'>
-        <Fade direction='up' delay={400} cascade damping={1e-1} triggerOnce={true}>
-          <h2 className={title}>My Pricing</h2>
+
+        <Fade direction="up" delay={420} cascade damping={0.1} triggerOnce>
+          <div className="flex items-center justify-center">
+            <div className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl uppercase font-semibold mb-4 tracking-[4px] bg-gradient-to-r text-center from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
+              My Pricing
+            </div>
+          </div>
         </Fade>
         <div className='mx-auto max-w-2xl sm:text-center'>
           <Fade direction='up' delay={600} cascade damping={1e-1} triggerOnce={true}>

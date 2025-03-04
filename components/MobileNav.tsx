@@ -28,7 +28,7 @@ const MobileNav = () => {
             <Logo />
             <Nav
               className="flex flex-col items-center gap-y-6"
-              linkSyle="text-xl"
+              linkStyle="text-xl"
               onClick={closeSheet} // Pass the closeSheet function to Nav
             />
           </div>
