@@ -19,42 +19,36 @@ const MobileNav = () => {
   const closeSheet = useCallback(() => setIsOpen(false), []);
 
   return (
-    <>
-      <div className='flex items-center xl:hidden'>
-        <Sheet open={isOpen} onOpenChange={setIsOpen}>
-          <SheetTrigger asChild>
-            <button aria-label="Open menu">
-              <AlignJustify className="cursor-pointer dark:text-white text-white w-[37px] h-[37px] rounded-full p-2 bg-black dark:bg-amber-300" />
-            </button>
-          </SheetTrigger>
+    <div className="flex items-center xl:hidden">
+      <Sheet open={isOpen} onOpenChange={setIsOpen}>
+        <SheetTrigger asChild>
+          <button aria-label="Open menu">
+            <AlignJustify className="cursor-pointer text-white w-[37px] h-[37px] rounded-full p-2 bg-black dark:bg-amber-300" />
+          </button>
+        </SheetTrigger>
 
-          <SheetContent className="h-full min-h-screen flex flex-col justify-between overflow-y-auto px-6">
-            {/* Header with Logo */}
-            <SheetHeader className="flex items-center justify-between pt-4">
-              <SheetTitle>
-                <button onClick={closeSheet} aria-label="Close menu">
-                  <Logo />
-                </button>
-              </SheetTitle>
-            </SheetHeader>
+        {/* Responsive Background for Light/Dark Mode */}
+        <SheetContent className="bg-gray-500 dark:bg-gray-900 text-white transition-colors duration-300">
+          <SheetHeader>
+            <SheetTitle>
+              <button onClick={closeSheet} aria-label="Close menu">
+                <Logo />
+              </button>
+            </SheetTitle>
+          </SheetHeader>
 
-            {/* Navigation Links */}
-            <div className="flex flex-col flex-grow items-center justify-center gap-6">
-              <Nav
-                className="flex flex-col items-center gap-y-6"
-                linkStyle="text-xl"
-                onClick={closeSheet}
-              />
-            </div>
+          {/* Social Links */}
+          <div className="mt-8 flex items-center justify-center">
+            <Socials containerStyle="flex gap-x-4 items-center" iconsStyles="text-2xl hover:bg-red-500 rounded-full" />
+          </div>
 
-            {/* Social Links */}
-            <div className="flex justify-center pb-6">
-              <Socials containerStyle="flex gap-x-4 items-center" iconsStyles="text-2xl" />
-            </div>
-          </SheetContent>
-        </Sheet>
-      </div>
-    </>
+          {/* Navigation Links */}
+          <div className="mt-6">
+            <Nav closeSheet={closeSheet} className="flex flex-col gap-4 text-white text-lg" />
+          </div>
+        </SheetContent>
+      </Sheet>
+    </div>
   );
 };
 

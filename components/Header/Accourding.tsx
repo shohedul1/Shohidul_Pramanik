@@ -18,12 +18,12 @@ const AccordionMenu = React.memo(() => {
                     Service
                 </AccordionTrigger>
                 <AccordionContent>
-                    <div className="flex flex-col bg-red-50 px-2 mt-2 py-2 dark:bg-gray-800 rounded-md">
+                    <div className="flex flex-col bg-green-50  text-black font-bold px-2 mt-2 py-2 dark:bg-gray-800 rounded-md">
                         {serviceLinks.map((link) => (
                             <Link
                                 key={link.href}
                                 href={link.href}
-                                className="block py-2 px-2.5 hover:bg-red-100 rounded-full dark:hover:bg-indigo-500 dark:text-white"
+                                className="block py-2  px-2.5 hover:bg-red-500 rounded-full dark:hover:bg-indigo-500 dark:text-white"
                             >
                                 {link.label}
                             </Link>
