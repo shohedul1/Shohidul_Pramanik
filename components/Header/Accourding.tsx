@@ -35,4 +35,7 @@ const AccordionMenu = React.memo(() => {
     );
 });
 
+// Setting display name for the memoized component
+AccordionMenu.displayName = 'AccordionMenu';
+
 export default AccordionMenu;
