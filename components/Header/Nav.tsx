@@ -1,6 +1,7 @@
 'use client';
 import Link from 'next/link';
 import React, { FC } from 'react';
+import Service from './Service';
 
 const links = [
   { path: '/about', name: 'About' },
@@ -51,6 +52,7 @@ const Nav: FC<NavProps> = ({ className, linkStyle, onClick }) => {
           <span className="relative text-sm">{link.name}</span>
         </Link>
       ))}
+      <Service/>
     </nav>
   );
 };

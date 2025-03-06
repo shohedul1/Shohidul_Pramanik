@@ -2,7 +2,9 @@
 
 import * as React from "react"
 import { Moon, Sun } from "lucide-react"
-import { useTheme } from "next-themes"
+import { useTheme } from "next-themes";
+import { IoFlowerOutline } from "react-icons/io5";
+
 
 import { Button } from "@/components/ui/button"
 import {
@@ -19,9 +21,7 @@ export function ModeToggle() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="outline" size="icon">
-          <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-          <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-          <span className="sr-only">Toggle theme</span>
+          <IoFlowerOutline className="cursor-pointer dark:text-white text-white w-[37px] h-[37px] rounded-full p-2 bg-black dark:bg-amber-300" />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">

@@ -1,7 +1,7 @@
 'use client';
 
 import { Fade } from "react-awesome-reveal";
-import Socials from "../Socials";
+import Socials from "../Header/Socials";
 import Link from "next/link";
 
 const linkPath = [

@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Sen } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
+import Header from "@/components/Header/Header";
 import Footer from "@/components/footer/Footer";
-import { ThemeProvider } from "@/components/ThemeProvider ";
+import { ThemeProvider } from "@/components/Children/ThemeProvider ";
 import { Toaster } from "@/components/ui/toaster"
 
 
