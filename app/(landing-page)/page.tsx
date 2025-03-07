@@ -1,5 +1,4 @@
 import Reviews from "./components/home/fiveSection/Reviews";
-import Gallery from "./components/home/fourSection/Gallery";
 import Hero from "./components/home/fristSection/Hero";
 import Newsletter from "./components/home/seventSection/Newsletter";
 import Faq from "./components/home/sixSection/Faq";
@@ -12,7 +11,6 @@ export default function Home() {
       <Hero />
       <Services />
       <Features />
-      <Gallery />
       <Reviews />
       <Faq />
       <Newsletter />

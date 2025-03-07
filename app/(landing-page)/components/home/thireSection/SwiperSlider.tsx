@@ -1,39 +1,129 @@
-import { mySkills } from '@/lib/data'
-import React from 'react'
-import { Fade } from 'react-awesome-reveal';
+import React, { useMemo } from "react";
+import { mySkills } from "@/lib/data";
+import { Fade } from "react-awesome-reveal";
+import { motion } from "framer-motion";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/effect-cards";
+import { EffectCards } from "swiper/modules";
 
 const SwiperSlider = () => {
+    // Memoize the flattened skills array with category info for performance.
+    const skills = useMemo(() => {
+        return Object.entries(mySkills).flatMap(([categoryKey, skillArray]) =>
+            skillArray.map((skill) => ({ ...skill, categoryKey }))
+        );
+    }, []);
+
+    // Animation configuration for the first slider (left-to-right).
+    const leftToRight = {
+        animate: { x: ["0%", "-100%"] },
+        transition: { repeat: Infinity, duration: 20, ease: "linear" },
+    };
+
+    // Animation configuration for the second slider (right-to-left).
+    const rightToLeft = {
+        animate: { x: ["-100%", "0%"] },
+        transition: { repeat: Infinity, duration: 20, ease: "linear" },
+    };
+
     return (
-        <div className='flex flex-col gap-10'>
-            <Fade direction="up" delay={420} cascade damping={0.1} triggerOnce>
-                <div className="flex items-center justify-center">
-                    <div className="text-xl lg:text-5xl font-semibold mb-4 tracking-[4px] bg-gradient-to-r text-center from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text sm:text-5xl uppercase">
+        <div className="flex flex-col gap-10">
+            <Fade
+                direction="up"
+                delay={420}
+                cascade
+                damping={0.1}
+                triggerOnce
+            >
+                <div className="flex justify-center">
+                    <h2 className="text-xl lg:text-5xl font-semibold mb-4 tracking-[4px] bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent uppercase text-center">
                         My Programming Skills
-                    </div>
+                    </h2>
                 </div>
             </Fade>
-            <div className='grid grid-cols-4 gap-4'>
-                {
-                    // Map through the skill categories and display them
-                    Object.keys(mySkills).map((categoryKey) => {
-                        // Assert that categoryKey is a key of mySkills
-                        const category = categoryKey as keyof typeof mySkills;
-                        return mySkills[category].map((skill) => (
-                            <div key={skill.id} className="flex flex-col items-center">
-                                <div
-                                    style={{ backgroundColor: skill.bgColor }}
-                                    className="p-4 rounded-full mb-2"
-                                >
-                                    <skill.icon size={40} color="white" />
-                                </div>
-                                <span className="font-medium text-center text-black">{skill.name}</span>
+
+            {/* First slider (left to right) */}
+            <div className="w-full overflow-hidden dark:bg-gray-900 bg-gray-300 py-5">
+                <motion.div
+                    className="flex gap-10 min-w-max"
+                    {...leftToRight}
+                >
+                    {skills.map((skill) => (
+                        <div
+                            key={`l-${skill.categoryKey}-${skill.id}`}
+                            className="flex flex-col items-center"
+                        >
+                            <div
+                                style={{ backgroundColor: skill.bgColor }}
+                                className="p-4 rounded-full mb-2"
+                            >
+                                <skill.icon size={40} color="#fff" />
                             </div>
-                        ))
-                    })
-                }
+                            <span className="font-medium dark:text-white text-black text-sm md:text-base text-center">
+                                {skill.name}
+                            </span>
+                        </div>
+                    ))}
+                </motion.div>
+            </div>
+
+            {/* Second slider (right to left) */}
+            <div className="w-full overflow-hidden dark:bg-gray-900 bg-gray-300 py-5">
+                <motion.div
+                    className="flex gap-10 min-w-max"
+                    {...rightToLeft}
+                >
+                    {skills.map((skill) => (
+                        <div
+                            key={`r-${skill.categoryKey}-${skill.id}`}
+                            className="flex flex-col items-center"
+                        >
+                            <div
+                                style={{ backgroundColor: skill.bgColor }}
+                                className="p-4 rounded-full mb-2"
+                            >
+                                <skill.icon size={40} color="#fff" />
+                            </div>
+                            <span className="font-medium dark:text-white text-black text-sm md:text-base text-center">
+                                {skill.name}
+                            </span>
+                        </div>
+                    ))}
+                </motion.div>
+            </div>
+
+            {/* Swiper slider for skills cards */}
+            <div className="flex justify-center  overflow-hidden dark:bg-gray-900 bg-gray-300 py-5 ">
+                <Swiper
+                    effect={"cards"}
+                    grabCursor={true}
+                    modules={[EffectCards]}
+                    className="w-1/3"
+                >
+                    <div className="w-full">
+                        {skills.map((skill) => (
+                            <SwiperSlide key={`s-${skill.categoryKey}-${skill.id}`}>
+                                <div
+                                    className="flex flex-col items-center justify-center py-5  rounded-lg"
+                                    style={{ backgroundColor: skill.bgColor }}  >
+                                    <div
+                                        className="rounded-full"
+                                        style={{ backgroundColor: skill.bgColor }}
+                                    >
+                                        <skill.icon size={40} color="#fff" />
+                                    </div>
+                                    <span className="font-medium dark:text-white text-black text-sm md:text-base text-center">
+                                        {skill.name}
+                                    </span>
+                                </div>
+                            </SwiperSlide>
+                        ))}
+                    </div>
+                </Swiper>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default SwiperSlider;
