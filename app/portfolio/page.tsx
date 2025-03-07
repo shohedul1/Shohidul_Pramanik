@@ -1,9 +1,9 @@
 'use client';
 
-import ProjectCart from "@/components/home/fourSection/ProjectCart";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useState } from "react";
 import { Fade } from "react-awesome-reveal";
+import ProjectCart from "../(landing-page)/components/home/fourSection/ProjectCart";
 
 
 const projectData = [
@@ -143,7 +143,7 @@ const projectData = [
     link: 'https://tranquil-alpaca-844f23.netlify.app',
     codepen: 'https://tranquil-alpaca-844f23.netlify.app'
   },
-  
+
   {
     image: '/work/Ecommerce_web.png',
     category: 'Fashion',
@@ -152,7 +152,7 @@ const projectData = [
     link: 'https://celebrated-mochi-ef654b.netlify.app',
     codepen: 'https://celebrated-mochi-ef654b.netlify.app'
   },
-  
+
   {
     image: '/work/shopping.png',
     category: 'Fashion',
@@ -161,7 +161,7 @@ const projectData = [
     link: 'https://symphonious-empanada-b4077e.netlify.app',
     codepen: 'https://symphonious-empanada-b4077e.netlify.app'
   },
-  
+
   {
     image: '/work/Ecommer_application.png',
     category: 'Fashion',
@@ -170,7 +170,7 @@ const projectData = [
     link: 'https://ecommerce-shopping1.netlify.app',
     codepen: 'https://ecommerce-shopping1.netlify.app'
   },
-  
+
   {
     image: '/work/Protfolio.png',
     category: 'Fashion',
@@ -197,7 +197,7 @@ const projectData = [
     codepen: 'https://netshohidul6.netlify.app'
   },
   {
-    
+
     image: '/work/game.png',
     category: 'Fashion',
     name: "Mordan gaming web app",
@@ -205,7 +205,7 @@ const projectData = [
     link: 'https://netshohidul2.netlify.app',
     codepen: 'https://netshohidul2.netlify.app'
   },
-  
+
 ]
 
 const uniqueCategories = [

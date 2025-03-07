@@ -7,9 +7,9 @@ import { ArrowRightIcon, Building, MessageSquare, UserCheck, UserRoundCheck } fr
 import { toast } from 'react-toastify';
 import React, { useState } from 'react';
 import 'react-toastify/dist/ReactToastify.css';
-import Notification from '@/components/Notification/Notification';
 import { useRouter } from 'next/navigation';
 import { Fade } from 'react-awesome-reveal';
+import Notification from '../(landing-page)/components/Notification/Notification';
 
 
 const intialValue = {
