@@ -2,7 +2,7 @@ import { Fade } from "react-awesome-reveal";
 import { motion } from "framer-motion";
 import Link from 'next/link';
 import Sebscribe from "./Sebscribe";
-import Button from "@/components/button/Button";
+import Button from "../../button/Button";
 
 const FirstDesing = () => {
     return (

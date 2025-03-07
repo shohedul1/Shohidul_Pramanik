@@ -1,9 +1,9 @@
 'use client';
 
-import Notification from "@/components/Notification/Notification";
 import FirstDesing from "./FirstDesing";
 import TypeWriter from "./TypeWriter";
 import ClientSubcribe from "./ClientSubcribe";
+import Notification from "../../Notification/Notification";
 
 const Hero = () => {
   return (

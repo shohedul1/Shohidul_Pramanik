@@ -44,10 +44,12 @@
 import type { Metadata } from "next";
 import { Sen } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header/Header";
-import Footer from "@/components/footer/Footer";
 import { Toaster } from "@/components/ui/toaster";
-import { ThemeProvider } from "@/components/Children/ThemeProvider ";
+import { ThemeProvider } from "./(landing-page)/components/Children/ThemeProvider ";
+import Header from "./(landing-page)/components/Header/Header";
+import Footer from "./(landing-page)/components/footer/Footer";
+import ScrollToTop from "./(landing-page)/components/ScrollToTop/ScrollToTop";
+
 
 const SenFont = Sen({ subsets: ["latin"], weight: ["400", "600", "700"], display: "swap" });
 
@@ -69,6 +71,7 @@ export default function RootLayout({
             <Footer />
           </div>
           <Toaster />
+          <ScrollToTop />
         </ThemeProvider>
       </body>
     </html>

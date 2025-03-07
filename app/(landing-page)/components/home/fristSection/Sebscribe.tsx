@@ -1,11 +1,12 @@
 'use client';
 import React, { useState } from 'react'
-import { Input } from '../../ui/input'
-import { Label } from '../../ui/label'
+
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
 import { Fade } from "react-awesome-reveal";
-import SubscriptButton from '@/components/button/SubscriptButton';
+import SubscriptButton from '../../button/SubscriptButton';
+import { Label } from '@/components/ui/label';
+import { Input } from '@/components/ui/input';
 
 const Sebscribe = () => {
     const [email, setEmail] = useState('');
