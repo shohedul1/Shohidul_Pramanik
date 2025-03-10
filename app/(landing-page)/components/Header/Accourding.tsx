@@ -14,7 +14,7 @@ const AccordionMenu = React.memo(() => {
     return (
         <Accordion type="single" collapsible>
             <AccordionItem value="service">
-                <AccordionTrigger className="text-lg px-4 py-1 font-medium text-indigo-600 border-2 border-indigo-600 rounded-full hover:text-white group hover:bg-indigo-600 dark:text-indigo-300 dark:border-indigo-500 dark:hover:text-white dark:hover:bg-indigo-600">
+                <AccordionTrigger className="text-lg px-4 bg-red-50 py-1 font-medium text-indigo-600 border-2 border-indigo-600 rounded-full hover:text-white group hover:bg-indigo-600 dark:text-indigo-300 dark:border-indigo-500 dark:hover:text-white dark:hover:bg-indigo-600">
                     Service
                 </AccordionTrigger>
                 <AccordionContent>

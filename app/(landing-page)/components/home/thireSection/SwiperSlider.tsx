@@ -44,7 +44,7 @@ const SwiperSlider = () => {
             </Fade>
 
             {/* First slider (left to right) */}
-            <div className="w-full overflow-hidden dark:bg-gray-900 bg-gray-300 py-5">
+            <div className="w-full overflow-hidden  py-5">
                 <motion.div
                     className="flex gap-10 min-w-max"
                     {...leftToRight}
@@ -60,7 +60,7 @@ const SwiperSlider = () => {
                             >
                                 <skill.icon size={40} color="#fff" />
                             </div>
-                            <span className="font-medium dark:text-white text-black text-sm md:text-base text-center">
+                            <span className="font-medium  text-black text-sm md:text-base text-center">
                                 {skill.name}
                             </span>
                         </div>
@@ -69,7 +69,7 @@ const SwiperSlider = () => {
             </div>
 
             {/* Second slider (right to left) */}
-            <div className="w-full overflow-hidden dark:bg-gray-900 bg-gray-300 py-5">
+            <div className="w-full overflow-hidden  py-5">
                 <motion.div
                     className="flex gap-10 min-w-max"
                     {...rightToLeft}
@@ -85,7 +85,7 @@ const SwiperSlider = () => {
                             >
                                 <skill.icon size={40} color="#fff" />
                             </div>
-                            <span className="font-medium dark:text-white text-black text-sm md:text-base text-center">
+                            <span className="font-medium  text-black text-sm md:text-base text-center">
                                 {skill.name}
                             </span>
                         </div>
@@ -94,12 +94,12 @@ const SwiperSlider = () => {
             </div>
 
             {/* Swiper slider for skills cards */}
-            <div className="flex justify-center  overflow-hidden dark:bg-gray-900 bg-gray-300 py-5 ">
+            <div className="flex justify-center  overflow-hidden  py-5 ">
                 <Swiper
                     effect={"cards"}
                     grabCursor={true}
                     modules={[EffectCards]}
-                    className="w-1/3"
+                    className="w-1/2 md:w-1/3"
                 >
                     <div className="w-full">
                         {skills.map((skill) => (

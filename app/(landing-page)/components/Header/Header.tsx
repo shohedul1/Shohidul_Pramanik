@@ -28,7 +28,7 @@ const Header = () => {
                 : 'dark:bg-transparent'
             } w-full fixed top-0 left-0 z-30 transition-all py-4`}
         >
-            <div className="container ">
+            <div className="px-5 container">
                 <div className="flex items-center justify-between">
                     {/* Logo */}
                     <div className="flex-1">

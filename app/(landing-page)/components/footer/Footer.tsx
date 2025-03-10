@@ -14,16 +14,17 @@ const linkPath = [
 ];
 
 const Footer = () => {
-  const iconsStyles = "dark:hover:text-red-500 hover:text-blue-500";
+  const iconsStyles = 'hover:text-white hover:bg-blue-500 p-2 rounded-full scale-105';
+
 
   return (
     <footer className="container mx-auto w-full relative overflow-hidden px-2 mt-5 rounded-tl-[100px] rounded-tr-[100px] ">
       <Fade direction="up" delay={400} cascade damping={0.1} triggerOnce={true}>
         <div className="relative w-full  overflow-hidden
-            before:absolute before:inset-0 before:bg-[conic-gradient(from_0deg,#483D8B,#DCDCDC,#808080,#00FF00)] 
+            before:absolute before:inset-0 before:bg-[conic-gradient(from_0deg,#483D8B,#DCDCDC,#808080,#70ab00)] 
             before:animate-custom-spin before:rounded-xl before:z-0 before:will-change-transform"
         >
-          <div className="bg-gray-300  dark:text-white w-full pt-8 px-4 ">
+          <div className="bg-white dark:bg-black  dark:text-white w-full pt-8 px-4 ">
             {/* Footer Content */}
             <div className="flex flex-col lg:flex-row justify-center gap-2 lg:gap-5 ">
               {/* Left Section */}
@@ -32,10 +33,10 @@ const Footer = () => {
                   <span className="bg-gradient-to-r from-blue-500 to-green-500 text-4xl md:text-6xl text-transparent bg-clip-text">
                     Web Developer
                   </span>
-                  <p className="md:text-2xl text-red-100 max-w-xl text-xl font-bold hover:text-white">
+                  <p className="md:text-2xl dark:text-red-100 max-w-xl text-xl font-bold">
                     Crafting responsive and functional websites to bring your ideas to life.
                   </p>
-                  <span className="font-bold bg-gradient-to-r from-zinc-100 to-green-400 text-transparent bg-clip-text">
+                  <span className="font-bold text-black bg-gradient-to-r from-lime-500 to-green-400 text-transparent bg-clip-text">
                     Let&apos;s build something amazing together!
                   </span>
                   <Socials iconsStyles={iconsStyles} containerStyle="md:flex hidden gap-x-6 mb-4" />
@@ -50,7 +51,7 @@ const Footer = () => {
                       <Link
                         key={item.id}
                         href={item.path}
-                        className="text-xl text-blue-500 font-bold hover:text-white dark:hover:text-red-500 "
+                        className="text-xl text-blue-500 font-bold hover:text-red-500 "
                       >
                         {item.name}
                       </Link>
@@ -82,3 +83,8 @@ const Footer = () => {
 };
 
 export default Footer;
+
+
+
+
+

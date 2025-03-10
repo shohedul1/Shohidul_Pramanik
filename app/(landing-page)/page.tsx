@@ -7,7 +7,7 @@ import Features from "./components/home/towSection/Features";
 
 export default function Home() {
   return (
-    <main>
+    <main className="px-5">
       <Hero />
       <Services />
       <Features />
