@@ -9,6 +9,7 @@ import { FaSass } from "react-icons/fa";
 import { SiVite } from "react-icons/si";
 import { FaAvianex } from "react-icons/fa6";
 import { FaStripe, FaPaypal, FaCcVisa, FaCreditCard } from "react-icons/fa"; // Use FaCreditCard for Razorpay
+import { FaCheckCircle, FaRocket, FaStar, FaHeadset, FaClipboardList, FaRegHandshake } from 'react-icons/fa';
 
 
 import { TbBrandNextjs, TbBrandRedux } from "react-icons/tb";
@@ -64,38 +65,61 @@ export const servicesData = [
         id: "1",
         title: "Web Development",
         slug: "Build responsive, scalable, and modern websites using the latest technologies like React, Next.js, and TailwindCSS",
-        description: `Web development is the backbone of the modern digital world. It involves creating dynamic and interactive websites using technologies like HTML, CSS, JavaScript, React, and Next.js. 
-        With the increasing demand for web applications, developers focus on responsive design, accessibility, and performance optimization. 
-        The process includes front-end development (UI/UX), back-end development (server-side logic), and full-stack development (combining both). 
-        Keeping up with trends such as serverless computing, JAMstack, and AI-driven interfaces is essential for modern web developers. 
-        By leveraging frameworks like Next.js and TailwindCSS, developers can build fast, scalable, and SEO-friendly web applications that provide excellent user experiences.`,
+        description: `We specialize in building high-performance websites using modern technologies such as React, Next.js, and TailwindCSS. Our focus is on creating fast, responsive, and SEO-friendly websites that provide an excellent user experience.`,
         icon: Bird,
     },
     {
         id: "2",
-        title: "Backend Development",
-        slug: "Develop robust APIs and backend systems using Node.js, Express.js, and MongoDB for seamless data management",
-        description: `Backend development focuses on building robust server-side applications that power the web. 
-        Technologies like Node.js, Express.js, and MongoDB allow developers to create secure and scalable APIs that handle user authentication, database management, and real-time data processing. 
-        A strong backend is crucial for ensuring seamless communication between the front end and databases. 
-        Security best practices, such as hashing passwords, using JWT authentication, and preventing SQL injection, are essential for backend developers. 
-        Microservices, GraphQL, and serverless functions are becoming popular choices for building efficient backend systems in modern web applications.`,
-        icon: Smile,
+        title: "Custom Web Applications",
+        slug: "Business management tools, Custom dashboards & CRM, AI-powered automation",
+        description: `We develop tailored web applications to meet your business needs, from custom dashboards and CRM systems to AI-powered automation tools. Our solutions improve efficiency and enhance user engagement.`,
+        icon: FaRocket,
     },
     {
         id: "3",
-        slug: "Create user-friendly and visually appealing designs that ensure great user experiences.",
+        title: "API Development & Integration",
+        slug: "Secure API connections, Payment gateway integration, Third-party API implementation",
+        description: `We build and integrate secure APIs to enable seamless communication between your applications. Whether it's payment gateways, third-party services, or internal API solutions, we ensure smooth and efficient connectivity.`,
+        icon: FaClipboardList,
+    },
+    {
+        id: "4",
+        title: "Performance Optimization",
+        slug: "Speed optimization, Security enhancement, SEO improvements",
+        description: `We enhance website speed, security, and search engine performance. Our optimization techniques include code splitting, lazy loading, caching strategies, and security best practices to ensure a seamless experience.`,
+        icon: Bird,
+    },
+    {
+        id: "5",
+        title: "Backend Development",
+        slug: "Develop robust APIs and backend systems using Node.js, Express.js, and MongoDB for seamless data management",
+        description: `We build powerful backend systems using Node.js, Express.js, and MongoDB. Our backend solutions ensure efficient data management, authentication, and real-time functionality for web applications.`,
+        icon: Smile,
+    },
+    {
+        id: "6",
         title: "UI/UX Design",
-        description: `UI/UX design plays a crucial role in creating engaging and user-friendly applications. 
-        A well-designed user interface (UI) ensures smooth navigation, while a strong user experience (UX) keeps users engaged. 
-        UI/UX designers use tools like Figma, Adobe XD, and Sketch to create wireframes and prototypes. 
-        Design principles such as contrast, balance, and accessibility are key to ensuring inclusivity. 
-        With the rise of dark mode, neumorphism, and micro-interactions, UI/UX design continues to evolve. 
-        A focus on user research, A/B testing, and iterative design helps in crafting better digital experiences that enhance usability and conversion rates.`,
+        slug: "Create user-friendly and visually appealing designs that ensure great user experiences.",
+        description: `We create visually appealing and user-friendly designs that enhance the overall experience. Using tools like Figma and Adobe XD, we focus on usability, accessibility, and modern design trends.`,
         icon: Scan,
     },
+    {
+        id: "7",
+        title: "E-commerce Solutions",
+        slug: "Custom online stores, Secure payment gateways, Scalable e-commerce platforms",
+        description: `We develop powerful and secure e-commerce platforms tailored to your business needs. From custom online stores to seamless payment gateway integration, we ensure a smooth and scalable shopping experience for your customers.`,
+        icon: FaRegHandshake,
+    },
+    {
+        id: "8",
+        title: "24/7 Client Support",
+        slug: "Dedicated customer service, Real-time issue resolution, Ongoing maintenance and updates",
+        description: `Our dedicated support team is available 24/7 to assist you with any technical issues, updates, or maintenance. We prioritize client satisfaction by ensuring seamless operations and immediate solutions whenever you need them.`,
+        icon: FaHeadset,
+    }
 
 ];
+
 
 
 export const serviceLinks = [
