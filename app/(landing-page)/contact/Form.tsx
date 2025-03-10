@@ -9,7 +9,7 @@ import React, { useState } from 'react';
 import 'react-toastify/dist/ReactToastify.css';
 import { useRouter } from 'next/navigation';
 import { Fade } from 'react-awesome-reveal';
-import Notification from '../(landing-page)/components/Notification/Notification';
+import Notification from '../components/Notification/Notification';
 
 
 const intialValue = {

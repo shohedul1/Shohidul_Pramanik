@@ -1,5 +1,3 @@
-
-
 import type { Metadata } from "next";
 import { Sen } from "next/font/google";
 import "./globals.css";

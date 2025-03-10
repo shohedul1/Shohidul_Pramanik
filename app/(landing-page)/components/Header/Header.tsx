@@ -26,7 +26,7 @@ const Header = () => {
             className={`${header
                 ? 'bg-white shadow-lg dark:bg-accent dark:shadow-3xl'
                 : 'dark:bg-transparent'
-                } w-full fixed top-0 left-0 z-30 transition-all py-4`}
+                } w-full  top-0 left-0 z-30 transition-all py-4`}
         >
             <div className="px-5 container">
                 <div className="flex items-center justify-between">
