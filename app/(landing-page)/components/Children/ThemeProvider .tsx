@@ -32,7 +32,7 @@ export function ThemeProvider({ children, ...props }: ProviderProps) {
 
   return (
     <NextThemesProvider {...props}>
-      <div className={`relative transition-all duration-500 ${bgColor} h-screen`}>
+      <div className={`relative transition-all duration-500 ${bgColor} `}>
         {children}
       </div>
     </NextThemesProvider>

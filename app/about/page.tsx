@@ -44,7 +44,7 @@ const infoData = [
 const About = () => {
   return (
     <section className="container mx-auto">
-      <div className="py-5  mb-2 border-b-2 border-red-400 shadow-xl  overflow-hidden  shadow-blue-600 text-black  rounded-t-[25px] rounded-b-[50px]">
+      <div className="py-5 px-4  mb-2 border-b-2 border-red-400 shadow-xl  overflow-hidden  shadow-blue-600 text-black  rounded-t-[25px] rounded-b-[50px]">
         <Fade direction="up" delay={420} cascade damping={0.1} triggerOnce>
           <div className="flex items-center justify-center">
             <div className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl uppercase font-semibold mb-4 tracking-[4px] bg-gradient-to-r text-center from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
@@ -54,9 +54,11 @@ const About = () => {
         </Fade>
         <div className="flex flex-col gap-20 xl:flex-row">
           {/* image */}
-          <div className='relative flex-1 xl:flex'>
+          <div className='relative flex-1 md:flex  justify-center'>
             <Fade direction='left' delay={600} cascade damping={1e-1} triggerOnce={true}>
-              <Image width={500} alt="Shohidul Pramanik" height={500} src={"https://res.cloudinary.com/djhjt07rh/image/upload/v1738250962/shohidul_u3nbyf.jpg"} />
+              <Image width={500} alt="Shohidul Pramanik"
+
+                height={500} src={"https://res.cloudinary.com/djhjt07rh/image/upload/v1741590989/shoihid_xejbaq.png"} />
             </Fade>
           </div>
           <div className="flex-1">

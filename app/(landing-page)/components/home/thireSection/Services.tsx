@@ -31,15 +31,15 @@ const Services = () => {
                                 // Use a unique key if available (e.g., item.id)
                                 <Link key={item.id} href={`/details/${item.id}`} passHref>
                                     <Tilt className="parallax-effect" perspective={600}>
-                                        <div className="bg-gray-200 rounded-lg h-full p-6 w-full relative">
+                                        <div className="bg-gray-200 dark:bg-black dark:text-white rounded-lg h-full p-6 w-full relative">
                                             {/* Image Icon */}
-                                            <div className="w-[70px] h-[70px] sm:w-[80px] sm:h-[80px] bg-primary text-white rounded-full flex justify-center items-center absolute -bottom-6 right-6">
+                                            <div className="w-[70px] h-[70px] sm:w-[80px] sm:h-[80px] bg-primary dark:text-white  text-white rounded-full flex justify-center items-center absolute -bottom-6 right-6">
                                                 <item.icon />
                                             </div>
-                                            <h1 className="text-center text-[#232c45] font-semibold capitalize text-xl">
+                                            <h1 className="text-center text-[#232c45] font-semibold capitalize text-xl dark:text-white">
                                                 {item.title}
                                             </h1>
-                                            <button className="px-6 py-2 rounded-lg hover:text-white font-semibold text-blue-950 hover:bg-blue-700 transition-all duration-200 mx-auto border-[1.2px] border-gray-400 border-opacity-25 mt-8 flex items-center space-x-2">
+                                            <button className="px-6 py-2 rounded-lg hover:text-white dark:text-white font-semibold text-blue-950 hover:bg-blue-700 transition-all duration-200 mx-auto border-[1.2px] border-gray-400 border-opacity-25 mt-8 flex items-center space-x-2">
                                                 {item.slug}
                                             </button>
                                         </div>

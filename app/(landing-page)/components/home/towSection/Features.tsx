@@ -1,97 +1,91 @@
 'use client';
-//react awesome reveal animation
-import { Fade } from "react-awesome-reveal";
 
+// React Awesome Reveal animation
+import { Fade } from "react-awesome-reveal";
 import { ArrowPathIcon, CloudArrowUpIcon, FingerPrintIcon, LockClosedIcon } from '@heroicons/react/24/solid'
+
 const features = [
   {
-    name: 'PHOTOGRAPHY',
-    description: 'Studio comes with elements mode specifically for photopraphers,including the client list, password protected pages,and the proofing gallery',
+    name: 'Photography',
+    description: 'Studio comes with elements mode specifically for photographers, including the client list, password-protected pages, and the proofing gallery.',
     icon: ArrowPathIcon
   },
   {
-    name: 'PORTFOLIO LIST',
-    description: 'use are portfolio list to create galleries of your work.It is easy intuitive,and most Importan all.You work is sure to command attention',
+    name: 'Portfolio List',
+    description: 'Use our portfolio list to create galleries of your work. It is easy, intuitive, and most importantly, ensures your work commands attention.',
     icon: CloudArrowUpIcon
   },
   {
-    name: 'FULLY CUSTOMISABLE',
-    description: 'It is a full siexble theme, all elements page and every other aspect of you website can be effortlessly adopted to fit your specific needs',
+    name: 'Fully Customizable',
+    description: 'It is a fully flexible theme. All elements, pages, and every other aspect of your website can be effortlessly adapted to fit your specific needs.',
     icon: FingerPrintIcon
   },
   {
-    name: 'FREE PLUGINS',
-    description: 'Studio comes with elements mode specifically for photopraphers,including the client list, password protected pages,and the proofing gallery',
+    name: 'Free Plugins',
+    description: 'Studio includes essential plugins for photographers, including the client list, password-protected pages, and a proofing gallery.',
     icon: LockClosedIcon
   }
-]
-const Features = () => {
-  const grid = 'grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none md:grid-cols-2 lg:gap-y-16';
-  const desc = 'mt-6 text-lg leading-8 text-black ';
-  const dtStyle = 'text-base font-semibold leading-7 text-muted-foreground justify-center';
-  const iconStyle = 'flex flex-col w-[100px] h-[100px] bg-primary rounded-full items-center justify-center mb-4';
+];
 
+const Features = () => {
   return (
-    <section className='pb-12 xl:py-12 '>
-      <div className='container mx-auto '>
+    <section className="pb-12 xl:py-12">
+      <div className="container mx-auto">
+        
+        {/* Title Section */}
         <Fade direction="up" delay={420} cascade damping={0.1} triggerOnce>
           <div className="flex items-center justify-center">
-            <div className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl uppercase font-semibold mb-4 tracking-[4px] bg-gradient-to-r text-center from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl uppercase font-semibold mb-4 tracking-[4px] bg-gradient-to-r text-center from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
               Key Features
-            </div>
+            </h2>
           </div>
         </Fade>
-        <Fade direction='up' delay={400} cascade damping={1e-1} triggerOnce={true}>
-          <div className='flex flex-col'>
-            <div className='mx-auto max-w-7xl text-center'>
-              <Fade direction='up' delay={600} cascade damping={1e-1} triggerOnce={true}>
-                <p className=" text-black font-bold text-xl md:text-5xl">
-                  Everything you need to faster.
-                </p>
-              </Fade>
-              <Fade direction='up' delay={800} cascade damping={1e-1} triggerOnce={true}>
-                <p className={desc}>
-                  It&apos;s wide array of extremely useful & user-friendly elements and features turn website creation into a cakewalk.Get started now & see just how easy it is to make the website you always wanted.
-                </p>
-              </Fade>
-            </div>
+
+        {/* Subtitle */}
+        <Fade direction="up" delay={600} cascade damping={0.1} triggerOnce>
+          <div className="text-center mx-auto max-w-4xl">
+            <p className="text-black font-bold text-xl md:text-5xl">
+              Everything you need, faster.
+            </p>
+            <p className="mt-4 text-lg leading-8 text-gray-700">
+              A wide array of user-friendly elements and features turn website creation into a seamless process. Get started now & build the website you've always wanted.
+            </p>
           </div>
-
         </Fade>
-        {/* features lists */}
-        <div className='mx-auto mt-16 max-w-2xl ms:mt-20 lg:mt-24 lg:max-w-4xl'>
-          <dl className={grid}>
-            <Fade direction='up' delay={1000} cascade damping={1e-1} triggerOnce={true}>
 
-              {
-                features.map((feature) => (
-                  <div key={feature.name}
-                    className='relative transition-all hover:bg-black duration-150 '
-                  >
-                    <dt className={dtStyle}>
-                      <div className={iconStyle}>
-                        <feature.icon
-                          className='h-[36px] w-[36px] text-black'
-                          aria-hidden="true"
-                        />
-                      </div>
-                      <div className='text-black '>
-                        {feature.name}
-                      </div>
-                    </dt>
-                    <dd className='mt-2 text-base leading-7 text-black'>
-                      {feature.description}
-                    </dd>
+        {/* Feature List */}
+        <div className="mx-auto mt-16 sm:mt-20 lg:mt-24 w-full">
+          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none md:grid-cols-2 lg:gap-y-16">
+            <Fade direction="up" delay={800} cascade damping={0.1} triggerOnce>
+              {features.map((feature) => (
+                <div
+                  key={feature.name}
+                  className="relative p-6 bg-white shadow-md rounded-lg hover:bg-black transition duration-500 group"
+                >
+                  <dt className="flex flex-col items-center text-center">
+                    {/* Icon */}
+                    <div className="w-[80px] h-[80px] flex items-center justify-center bg-primary rounded-full mb-4 transition-all duration-500 group-hover:bg-white">
+                      <feature.icon className="h-[36px] w-[36px] text-black group-hover:text-black transition duration-500" />
+                    </div>
+                    
+                    {/* Title */}
+                    <h3 className="text-xl font-semibold text-black group-hover:text-white transition duration-500">
+                      {feature.name}
+                    </h3>
+                  </dt>
 
-                  </div>
-                ))
-              }
+                  {/* Description */}
+                  <dd className="mt-2 text-base text-gray-700 text-center group-hover:text-white transition duration-500">
+                    {feature.description}
+                  </dd>
+                </div>
+              ))}
             </Fade>
           </dl>
         </div>
-      </div >
-    </section >
-  )
-}
+      </div>
+    </section>
+  );
+};
 
-export default Features
+export default Features;

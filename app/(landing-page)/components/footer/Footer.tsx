@@ -20,10 +20,10 @@ const Footer = () => {
   return (
     <footer className="container mx-auto w-full relative overflow-hidden px-2 mt-5 rounded-tl-[100px] rounded-tr-[100px] ">
       <Fade direction="up" delay={400} cascade damping={0.1} triggerOnce={true}>
-        <div className="relative w-full  overflow-hidden
-            before:absolute before:inset-0 before:bg-[conic-gradient(from_0deg,#483D8B,#DCDCDC,#808080,#70ab00)] 
-            before:animate-custom-spin before:rounded-xl before:z-0 before:will-change-transform"
-        >
+        <div className="relative w-full overflow-hidden
+  before:absolute before:inset-0 before:bg-[conic-gradient(from_0deg,theme(colors.violet.700)_0%,theme(colors.lime.300)_50%,theme(colors.violet.700)_100%)]
+  before:animate-custom-spin before:rounded-xl before:z-0 before:will-change-transform">
+
           <div className="bg-white dark:bg-black  dark:text-white w-full pt-8 px-4 ">
             {/* Footer Content */}
             <div className="flex flex-col md:flex-row justify-center gap-2 md:gap-5 ">
