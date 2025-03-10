@@ -13,11 +13,11 @@ const Hero = () => {
           <div className="my-5">
             <TypeWriter />
           </div>
-          <div className="grid grid-cols-1  xl:grid-cols-2  gap-12 md:gap-5 ">
+          <div className="grid grid-cols-1  md:grid-cols-2  gap-12 md:gap-5 ">
             <FirstDesing />
           </div>
-           
-            <ClientSubcribe />
+
+          <ClientSubcribe />
 
         </div>
       </section>

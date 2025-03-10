@@ -26,7 +26,7 @@ const features = [
   }
 ]
 const Features = () => {
-  const grid = 'grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16';
+  const grid = 'grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none md:grid-cols-2 lg:gap-y-16';
   const desc = 'mt-6 text-lg leading-8 text-black ';
   const dtStyle = 'text-base font-semibold leading-7 text-muted-foreground justify-center';
   const iconStyle = 'flex flex-col w-[100px] h-[100px] bg-primary rounded-full items-center justify-center mb-4';
