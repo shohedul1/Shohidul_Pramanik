@@ -18,7 +18,7 @@ const Footer = () => {
 
 
   return (
-    <footer className="container mx-auto w-full relative overflow-hidden px-2 mt-5 rounded-tl-[100px] rounded-tr-[100px] ">
+    <footer className="container mx-auto w-full h-full relative overflow-hidden px-2 mt-5 rounded-tl-[100px] rounded-tr-[100px] ">
       <Fade direction="up" delay={400} cascade damping={0.1} triggerOnce={true}>
         <div className="relative w-full overflow-hidden
   before:absolute before:inset-0 before:bg-[conic-gradient(from_0deg,theme(colors.violet.700)_0%,theme(colors.lime.300)_50%,theme(colors.violet.700)_100%)]

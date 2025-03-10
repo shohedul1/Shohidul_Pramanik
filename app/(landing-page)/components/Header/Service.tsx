@@ -1,26 +1,29 @@
-'use client';
 import * as React from 'react';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 import Link from 'next/link';
 import Accourding from './Accourding';
 import { serviceLinks } from '@/lib/data';
 
-const Service = () => {
+interface NavProps {
+    closeSheet?: () => void; // Explicitly type closeSheet as a function that returns void
+}
+
+const Service: React.FC<NavProps> = ({ closeSheet }) => {
     const [isDropdownOpen, setIsDropdownOpen] = React.useState(false);
 
     // Function to close the dropdown
     const closeDropdown = () => {
         setIsDropdownOpen(false);
     };
+
     return (
         <>
             {/* Mobile View: Accordion */}
             <div className="xl:hidden">
-                <Accourding />
+                <Accourding closeSheet={closeSheet} />
             </div>
 
             {/* Desktop View: Dropdown */}
-
             <div className="hidden xl:flex">
                 <DropdownMenu open={isDropdownOpen} onOpenChange={setIsDropdownOpen}>
                     <DropdownMenuTrigger>
@@ -54,7 +57,7 @@ const Service = () => {
                     <DropdownMenuContent align="end">
                         {serviceLinks.map((link, index) => (
                             <DropdownMenuItem
-                                key={index}  // ✅ Add key here
+                                key={index}
                                 className="hover:bg-gray-400 dark:hover:bg-blue-500 !important"
                                 onClick={closeDropdown} // Close dropdown on click
                             >

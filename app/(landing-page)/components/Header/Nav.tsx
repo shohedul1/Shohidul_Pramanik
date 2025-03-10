@@ -21,7 +21,7 @@ interface NavProps {
 const Nav: FC<NavProps> = ({ className, linkStyle, closeSheet }) => {
   return (
     <nav className={`${className}`}>
-      <Service />
+      <Service closeSheet={closeSheet} />
 
       {links.map((link, index) => (
         <Link

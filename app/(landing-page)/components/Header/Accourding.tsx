@@ -1,10 +1,14 @@
-'use client';
+// AccordionMenu.tsx
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { serviceLinks } from '@/lib/data';
 import Link from 'next/link';
 import React from 'react';
 
-const AccordionMenu = React.memo(() => {
+interface AccordionMenuProps {
+    closeSheet?: () => void; // Accept closeSheet as a prop
+}
+
+const AccordionMenu: React.FC<AccordionMenuProps> = ({ closeSheet }) => {
     return (
         <Accordion type="single" collapsible>
             <AccordionItem value="service">
@@ -12,12 +16,13 @@ const AccordionMenu = React.memo(() => {
                     Service
                 </AccordionTrigger>
                 <AccordionContent>
-                    <div className="flex flex-col bg-green-50  text-black font-bold px-2 mt-2 py-2 dark:bg-gray-800 rounded-md">
+                    <div className="flex flex-col bg-green-50 text-black font-bold px-2 mt-2 py-2 dark:bg-gray-800 rounded-md">
                         {serviceLinks.map((link) => (
                             <Link
                                 key={link.href}
                                 href={link.href}
-                                className="block py-2  px-2.5 hover:bg-red-500 rounded-full dark:hover:bg-indigo-500 dark:text-white"
+                                className="block py-2 px-2.5 hover:bg-red-500 rounded-full dark:hover:bg-indigo-500 dark:text-white"
+                                onClick={closeSheet} // Call closeSheet when a link is clicked
                             >
                                 {link.label}
                             </Link>
@@ -27,7 +32,7 @@ const AccordionMenu = React.memo(() => {
             </AccordionItem>
         </Accordion>
     );
-});
+};
 
 // Setting display name for the memoized component
 AccordionMenu.displayName = 'AccordionMenu';
