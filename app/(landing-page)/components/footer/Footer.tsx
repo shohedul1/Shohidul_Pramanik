@@ -26,7 +26,7 @@ const Footer = () => {
         >
           <div className="bg-white dark:bg-black  dark:text-white w-full pt-8 px-4 ">
             {/* Footer Content */}
-            <div className="flex flex-col lg:flex-row justify-center gap-2 lg:gap-5 ">
+            <div className="flex flex-col md:flex-row justify-center gap-2 md:gap-5 ">
               {/* Left Section */}
               <Fade direction="left" delay={400} cascade damping={0.1} triggerOnce={true}>
                 <div className="flex flex-col gap-4 justify-center">

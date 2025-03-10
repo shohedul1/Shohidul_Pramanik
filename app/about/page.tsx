@@ -43,8 +43,8 @@ const infoData = [
 
 const About = () => {
   return (
-    <section className="py-5 min-h-screen mb-2 border-b-2 border-red-400 shadow-xl  overflow-hidden  shadow-blue-600 text-black  rounded-t-[25px] rounded-b-[50px]">
-      <div className="container">
+    <section className="container mx-auto">
+      <div className="py-5  mb-2 border-b-2 border-red-400 shadow-xl  overflow-hidden  shadow-blue-600 text-black  rounded-t-[25px] rounded-b-[50px]">
         <Fade direction="up" delay={420} cascade damping={0.1} triggerOnce>
           <div className="flex items-center justify-center">
             <div className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl uppercase font-semibold mb-4 tracking-[4px] bg-gradient-to-r text-center from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
