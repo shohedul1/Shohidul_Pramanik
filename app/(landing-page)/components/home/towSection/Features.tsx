@@ -31,7 +31,7 @@ const Features = () => {
   return (
     <section className="pb-12 xl:py-12">
       <div className="container mx-auto">
-        
+
         {/* Title Section */}
         <Fade direction="up" delay={420} cascade damping={0.1} triggerOnce>
           <div className="flex items-center justify-center">
@@ -47,9 +47,11 @@ const Features = () => {
             <p className="text-black font-bold text-xl md:text-5xl">
               Everything you need, faster.
             </p>
+
             <p className="mt-4 text-lg leading-8 text-gray-700">
-              A wide array of user-friendly elements and features turn website creation into a seamless process. Get started now & build the website you've always wanted.
+              A wide array of user-friendly elements and features turn website creation into a seamless process. Get started now &amp; build the website you&apos;ve always wanted.
             </p>
+
           </div>
         </Fade>
 
@@ -67,7 +69,7 @@ const Features = () => {
                     <div className="w-[80px] h-[80px] flex items-center justify-center bg-primary rounded-full mb-4 transition-all duration-500 group-hover:bg-white">
                       <feature.icon className="h-[36px] w-[36px] text-black group-hover:text-black transition duration-500" />
                     </div>
-                    
+
                     {/* Title */}
                     <h3 className="text-xl font-semibold text-black group-hover:text-white transition duration-500">
                       {feature.name}
