@@ -98,9 +98,11 @@ const Page = () => {
                                     />
                                 ))}
                             </div>
+
                             <p className="text-sm text-gray-700 dark:text-gray-300 italic">
-                                "{testimonial.text}"
+                                &quot;{testimonial.text}&quot;
                             </p>
+
                             <p className="text-sm text-gray-900 dark:text-gray-100 font-semibold mt-2">
                                 — {testimonial.name}, {testimonial.title}
                             </p>
@@ -116,11 +118,11 @@ const Page = () => {
                     <p className="text-sm md:text-lg text-gray-700 dark:text-gray-300 ">
                         Let&copy;s build something amazing together! Click below to place an order.
                     </p>
-                   <div>
-                   <Link href={"/contact"} className=" bg-gradient-to-r from-blue-600 to-green-500 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:scale-105 transition">
-                        🚀 Order Now
-                    </Link>
-                   </div>
+                    <div>
+                        <Link href={"/contact"} className=" bg-gradient-to-r from-blue-600 to-green-500 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:scale-105 transition">
+                            🚀 Order Now
+                        </Link>
+                    </div>
                 </div>
 
             </div>
