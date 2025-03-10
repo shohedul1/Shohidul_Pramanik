@@ -66,7 +66,7 @@ const Features = () => {
               {
                 features.map((feature) => (
                   <div key={feature.name}
-                    className='relative hover:scale-110 transition-all'
+                    className='relative transition-all hover:bg-black duration-150 '
                   >
                     <dt className={dtStyle}>
                       <div className={iconStyle}>

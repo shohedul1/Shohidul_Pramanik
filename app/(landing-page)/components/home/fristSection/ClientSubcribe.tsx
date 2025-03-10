@@ -17,7 +17,7 @@ const badgeData = [
     },
     {
         icon: <RiBodyScanFill />,
-        endCountNum: 30, 
+        endCountNum: 30,
         endCountText: '',
         badgeText: 'k',
         label: 'Followers',
@@ -41,7 +41,7 @@ const ClientSubscribe = () => {
                 </p>
             </Fade>
 
-            <div className="grid grid-cols-2 gap-x-8 gap-y-12 text-center lg:grid-cols-3">
+            <div className="grid md:grid-cols-3 grid-cols-2 gap-x-8 gap-y-12 text-center ">
                 <Fade direction="up" delay={800} cascade damping={0.1} triggerOnce>
                     {badgeData.map(({ icon, endCountNum, endCountText, badgeText, label }, index) => (
                         <div key={index} className="mx-auto flex max-w-xs flex-col gap-y-4">
