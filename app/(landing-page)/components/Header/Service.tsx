@@ -46,11 +46,11 @@ const Service = () => {
 
                     <DropdownMenuContent align="end">
                         {
-                            serviceLinks.map((link) => (
+                            serviceLinks.map((link, index) => (
 
                                 <DropdownMenuItem className="hover:bg-gray-400 dark:hover:bg-blue-500 !important"
                                 >
-                                    <Link key={link.href} href={link.href}>
+                                    <Link key={index} href={link.href}>
                                         {link.label}
                                     </Link>
                                 </DropdownMenuItem>
