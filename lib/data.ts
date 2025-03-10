@@ -98,6 +98,15 @@ export const servicesData = [
 ];
 
 
+export const serviceLinks = [
+    { href: '/clientService', label: 'Client Service' },
+    { href: '/studentService', label: 'Student Service' },
+    { href: '/teacherService', label: 'Teacher Service' },
+    { href: '/adminService', label: 'Admin Service' }
+];
+
+
+
 
 
 

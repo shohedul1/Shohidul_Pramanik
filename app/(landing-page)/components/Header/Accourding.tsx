@@ -1,14 +1,8 @@
 'use client';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { serviceLinks } from '@/lib/data';
 import Link from 'next/link';
 import React from 'react';
-
-const serviceLinks = [
-    { href: '/clientService', label: 'Client Service' },
-    { href: '/studentService', label: 'Student Service' },
-    { href: '/teacherService', label: 'Teacher Service' },
-    { href: '/adminService', label: 'Admin Service' }
-];
 
 const AccordionMenu = React.memo(() => {
     return (

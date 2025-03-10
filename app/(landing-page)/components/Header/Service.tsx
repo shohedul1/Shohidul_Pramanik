@@ -3,6 +3,7 @@ import * as React from 'react';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 import Link from 'next/link';
 import Accourding from './Accourding';
+import { serviceLinks } from '@/lib/data';
 
 const Service = () => {
     return (
@@ -44,12 +45,20 @@ const Service = () => {
                     </DropdownMenuTrigger>
 
                     <DropdownMenuContent align="end">
-                        <DropdownMenuItem asChild>
-                            <Link href="/clientService">Client Service</Link>
-                        </DropdownMenuItem>
-                        <DropdownMenuItem asChild>
-                            <Link href="/studentService">Student Service</Link>
-                        </DropdownMenuItem>
+                        {
+                            serviceLinks.map((link) => (
+
+                                <DropdownMenuItem className="hover:bg-gray-400 dark:hover:bg-blue-500 !important"
+                                >
+                                    <Link key={link.href} href={link.href}>
+                                        {link.label}
+                                    </Link>
+                                </DropdownMenuItem>
+
+
+                            ))
+                        }
+
                     </DropdownMenuContent>
                 </DropdownMenu>
             </div>
