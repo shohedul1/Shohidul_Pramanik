@@ -45,21 +45,18 @@ const Service = () => {
                     </DropdownMenuTrigger>
 
                     <DropdownMenuContent align="end">
-                        {
-                            serviceLinks.map((link, index) => (
-
-                                <DropdownMenuItem className="hover:bg-gray-400 dark:hover:bg-blue-500 !important"
-                                >
-                                    <Link key={index} href={link.href}>
-                                        {link.label}
-                                    </Link>
-                                </DropdownMenuItem>
-
-
-                            ))
-                        }
-
+                        {serviceLinks.map((link, index) => (
+                            <DropdownMenuItem
+                                key={index}  // ✅ Add key here
+                                className="hover:bg-gray-400 dark:hover:bg-blue-500 !important"
+                            >
+                                <Link href={link.href}>
+                                    {link.label}
+                                </Link>
+                            </DropdownMenuItem>
+                        ))}
                     </DropdownMenuContent>
+
                 </DropdownMenu>
             </div>
         </>
