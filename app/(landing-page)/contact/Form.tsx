@@ -78,6 +78,7 @@ const Form = () => {
                             name='fristName'
                             value={user.fristName}
                             onChange={handleInputChange}
+                            className='text-black dark:text-white font-semibold'
                             placeholder='Please Enter you Name' />
                         <UserCheck className='absolute right-6' size={20} />
                     </div>
@@ -90,6 +91,7 @@ const Form = () => {
                             value={user.projectName}
                             name='projectName'
                             onChange={handleInputChange}
+                            className='text-black dark:text-white font-semibold'
                             placeholder='Please Enter your project Name' />
                         <UserRoundCheck className='absolute right-6' size={20} />
                     </div>
@@ -102,6 +104,7 @@ const Form = () => {
                             value={user.email}
                             name='email'
                             onChange={handleInputChange}
+                            className='text-black dark:text-white font-semibold'
                             placeholder='Please Enter Your Email' />
                         <Building className='absolute right-6' size={20} />
                     </div>
@@ -113,6 +116,7 @@ const Form = () => {
                             name='ApplicationMessage'
                             value={user.ApplicationMessage}
                             onChange={handleInputChange}
+                            className='text-black dark:text-white font-semibold'
                             placeholder='Type Your Application Message Herr...' />
                         <MessageSquare className='absolute right-6' size={20} />
                     </div>
