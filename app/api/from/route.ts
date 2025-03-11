@@ -5,19 +5,19 @@ import Joi from "joi";
 
 const schema = Joi.object({
     fristName: Joi.string().required(),
-    lastName: Joi.string().required(),
     email: Joi.string().email().required(),
-    message: Joi.string().required(),
+    projectName: Joi.string().required(),
+    ApplicationMessage: Joi.string().required(),
 });
 
 export const dynamic = 'force-dynamic';
 
 export async function POST(req: Request) {
     if (req.method === 'POST') {
-        const { fristName, lastName, email, message } = await req.json();
+        const { fristName, projectName, email, ApplicationMessage } = await req.json();
 
         // Validate the schema
-        const { error } = schema.validate({ fristName, email, lastName, message });
+        const { error } = schema.validate({ fristName, email, projectName, ApplicationMessage });
 
         if (error) {
             return NextResponse.json({
@@ -42,19 +42,18 @@ export async function POST(req: Request) {
                 to: "shohidulpramanik94@gmail.com",
                 html: `
                 <h2>Contact form Submission<h2/>
-                <p><strong>Last Name:<strong/>${fristName}<p/>
-                <p><strong>Last Name:<strong/>${lastName}<p/>
-
+                <p><strong>Client Name:<strong/>${fristName}<p/>
                 <p><strong>Email:<strong/>${email}<p/>
-                <p><strong>Message:<strong/>${message}<p/>
+                <p><strong>Project Name:<strong/>${projectName}<p/>
+                <p><strong>Application Message:<strong/>${ApplicationMessage}<p/>
                 `
             }
             await transport.sendMail(mailOptions);
             return NextResponse.json({
-                success: true, 
+                success: true,
                 message: 'Submit successful'
 
-             })
+            })
 
         } catch (error) {
             console.log(error)

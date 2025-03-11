@@ -14,9 +14,9 @@ import Notification from '../components/Notification/Notification';
 
 const intialValue = {
     fristName: "",
-    lastName: "",
+    projectName: "",
     email: "",
-    message: ""
+    ApplicationMessage: ""
 }
 
 const Form = () => {
@@ -78,7 +78,7 @@ const Form = () => {
                             name='fristName'
                             value={user.fristName}
                             onChange={handleInputChange}
-                            placeholder='First Name' />
+                            placeholder='Please Enter you Name' />
                         <UserCheck className='absolute right-6' size={20} />
                     </div>
                 </Fade>
@@ -86,11 +86,11 @@ const Form = () => {
                 <Fade direction='right' delay={600} cascade damping={1e-1} triggerOnce={true}>
                     <div className='relative flex items-center'>
                         <Input
-                            type='name'
-                            value={user.lastName}
-                            name='lastName'
+                            type='text'
+                            value={user.projectName}
+                            name='projectName'
                             onChange={handleInputChange}
-                            placeholder='Last Name' />
+                            placeholder='Please Enter your project Name' />
                         <UserRoundCheck className='absolute right-6' size={20} />
                     </div>
                 </Fade>
@@ -102,7 +102,7 @@ const Form = () => {
                             value={user.email}
                             name='email'
                             onChange={handleInputChange}
-                            placeholder='Email' />
+                            placeholder='Please Enter Your Email' />
                         <Building className='absolute right-6' size={20} />
                     </div>
                 </Fade>
@@ -110,10 +110,10 @@ const Form = () => {
                 <Fade direction='right' delay={1000} cascade damping={1e-1} triggerOnce={true}>
                     <div className='relative flex items-center'>
                         <Textarea
-                            name='message'
-                            value={user.message}
+                            name='ApplicationMessage'
+                            value={user.ApplicationMessage}
                             onChange={handleInputChange}
-                            placeholder='Type Your Message Herr...' />
+                            placeholder='Type Your Application Message Herr...' />
                         <MessageSquare className='absolute right-6' size={20} />
                     </div>
                 </Fade>
@@ -132,5 +132,4 @@ const Form = () => {
 }
 
 export default Form
-
 
