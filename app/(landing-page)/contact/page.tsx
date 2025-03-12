@@ -7,13 +7,15 @@ import { Fade } from 'react-awesome-reveal';
 
 const Contact = () => {
   return (
-    <section className='min-h-screen overflow-hidden'>
+    <section className='min-h-screen -mt-40 overflow-hidden'>
       <div className='container mx-auto text-black'>
-        <div className='grid xl:grid-cols-2 pt-12 mb-6 xl:mb-24'>
+        <div className='grid xl:grid-cols-2 mt-24 mb-6 xl:mb-24 '>
           {/* left content */}
           <div className='flex flex-col justify-center'>
             <Fade direction='left' delay={600} cascade damping={1e-1} triggerOnce={true}>
-              <h1 className='h1 max-w-md mb-8'>Let&copy;s work together.</h1>
+              <div className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl uppercase font-semibold mb-4 tracking-[4px] bg-gradient-to-r text-center from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
+                Let&copy;s work together.
+              </div>
             </Fade>
             <Fade direction='left' delay={400} cascade damping={1e-1} triggerOnce={true}>
               <div className='flex items-center gap-x-4 text-primary text-lg mb-4'>

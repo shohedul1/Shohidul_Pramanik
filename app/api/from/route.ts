@@ -6,7 +6,6 @@ import Joi from "joi";
 const schema = Joi.object({
     fristName: Joi.string().required(),
     email: Joi.string().email().required(),
-    projectName: Joi.string().required(),
     ApplicationMessage: Joi.string().required(),
 });
 
@@ -14,10 +13,10 @@ export const dynamic = 'force-dynamic';
 
 export async function POST(req: Request) {
     if (req.method === 'POST') {
-        const { fristName, projectName, email, ApplicationMessage } = await req.json();
+        const { fristName, email, ApplicationMessage } = await req.json();
 
         // Validate the schema
-        const { error } = schema.validate({ fristName, email, projectName, ApplicationMessage });
+        const { error } = schema.validate({ fristName, email, ApplicationMessage });
 
         if (error) {
             return NextResponse.json({
@@ -44,7 +43,6 @@ export async function POST(req: Request) {
                 <h2>Contact form Submission<h2/>
                 <p><strong>Client Name:<strong/>${fristName}<p/>
                 <p><strong>Email:<strong/>${email}<p/>
-                <p><strong>Project Name:<strong/>${projectName}<p/>
                 <p><strong>Application Message:<strong/>${ApplicationMessage}<p/>
                 `
             }

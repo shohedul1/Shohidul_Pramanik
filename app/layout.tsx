@@ -13,6 +13,9 @@ const SenFont = Sen({ subsets: ["latin"], weight: ["400", "600", "700"], display
 export const metadata: Metadata = {
   title: "Shohidul Pramanik",
   description: "Shohidul Pramanik",
+  icons: {
+    icon: '/logo.svg'
+  }
 };
 
 export default function RootLayout({
