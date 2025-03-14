@@ -4,13 +4,12 @@ import { Fade } from 'react-awesome-reveal';
 import { ServiceButton } from './buttonComponents/ServiceButton';
 import AboutButton from './buttonComponents/AboutButton';
 
-
-
 interface NavProps {
   className?: string;
+  closeSheet?: () => void;
 }
 
-const Nav: FC<NavProps> = ({ className }) => {
+const Nav: FC<NavProps> = ({ className, closeSheet }) => {
   return (
     <nav className={`${className}`}>
 
