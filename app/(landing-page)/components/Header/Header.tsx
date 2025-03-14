@@ -1,3 +1,55 @@
+// 'use client';
+// import { useEffect, useState } from 'react';
+// import Logo from './Logo';
+// import MobileNav from './MobileNav';
+// import Nav from './Nav';
+// import { ModeToggle } from './ModeToggle';
+// import { Fade } from 'react-awesome-reveal';
+
+// const Header = () => {
+//     const [header, setHeader] = useState(false);
+
+//     useEffect(() => {
+//         const handleScroll = () => {
+//             setHeader(window.scrollY > 50);
+//         };
+
+//         window.addEventListener('scroll', handleScroll);
+//         return () => window.removeEventListener('scroll', handleScroll);
+//     }, []);
+
+//     return (
+//         <header
+//             className={`${header
+//                 ? 'bg-white shadow-lg dark:bg-accent dark:shadow-3xl'
+//                 : 'dark:bg-transparent'
+//                 } w-full  top-0 left-0 z-30 transition-all `}
+//         >
+//             <div className="container px-4">
+//                 <div className="flex items-center justify-between">
+//                     {/* Logo */}
+//                     {/* <div className="flex-1"> */}
+//                     <Fade direction="left" delay={100} cascade damping={0.1} triggerOnce>
+//                         <Logo />
+//                     </Fade>
+//                     {/* </div> */}
+
+//                     {/* Navigation */}
+//                     <div className="flex items-center gap-x-6 justify-center">
+//                         <Nav className="hidden xl:flex gap-2 items-center justify-center" />
+//                         <ModeToggle />
+//                         <div className="xl:hidden">
+//                             <MobileNav />
+//                         </div>
+//                     </div>
+//                 </div>
+//             </div>
+//         </header>
+//     );
+// };
+
+// export default Header;
+
 
 
 
@@ -8,6 +60,7 @@ import Logo from './Logo';
 import MobileNav from './MobileNav';
 import Nav from './Nav';
 import { ModeToggle } from './ModeToggle';
+import { Fade } from 'react-awesome-reveal';
 
 const Header = () => {
     const [header, setHeader] = useState(false);
@@ -31,13 +84,13 @@ const Header = () => {
             <div className="px-5 container">
                 <div className="flex items-center justify-between">
                     {/* Logo */}
-                    <div className="flex-1">
+                    <Fade direction="left" delay={100} cascade damping={0.1} triggerOnce>
                         <Logo />
-                    </div>
+                    </Fade>
 
                     {/* Navigation */}
                     <div className="flex items-center gap-x-6 justify-center">
-                        <Nav className="hidden xl:flex gap-2 items-center justify-center" linkStyle="capitalize relative hover:text-primary transition-all" />
+                        <Nav className="hidden xl:flex gap-2 items-center justify-center"  />
                         <ModeToggle />
                         <div className="xl:hidden">
                             <MobileNav />

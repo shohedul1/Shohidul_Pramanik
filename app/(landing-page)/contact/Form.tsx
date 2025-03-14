@@ -14,14 +14,12 @@ import Notification from '../components/Notification/Notification';
 // Type for form values
 interface FormValues {
     fristName: string;
-    projectName: string;
     email: string;
     ApplicationMessage: string;
 }
 
 const initialValue: FormValues = {
     fristName: "",
-    projectName: "",
     email: "",
     ApplicationMessage: ""
 };
@@ -94,7 +92,7 @@ const Form: React.FC = () => {
                             className="text-black dark:text-white font-semibold"
                             placeholder="Please Enter your Name"
                         />
-                        <UserCheck className="absolute right-6" size={20} />
+                        <UserCheck className="absolute right-6 text-black dark:text-white font-semibold" size={20} />
                     </div>
                 </Fade>
 
@@ -106,10 +104,10 @@ const Form: React.FC = () => {
                             name="email"
                             value={user.email}
                             onChange={handleInputChange}
-                            className="text-black dark:text-white font-semibold w-full"
+                            className="text-black dark:text-white font-semibold"
                             placeholder="Please Enter Your Email"
                         />
-                        <Building className="absolute right-4 sm:right-6" size={20} />
+                        <Building className="absolute right-4 sm:right-6 text-black dark:text-white font-semibold" size={20} />
                     </div>
                 </Fade>
 
@@ -121,19 +119,18 @@ const Form: React.FC = () => {
                             name="ApplicationMessage"
                             value={user.ApplicationMessage}
                             onChange={handleInputChange}
-                            className="pl-5 pr-10"
+                            className="pl-5 pr-10 text-black dark:text-white font-semibold w-full"
                             placeholder="Type Your Application Message Here..."
                             rows={1}
                         />
-                        <MessageSquare className="absolute right-[20px] top-5" size={20} />
+                        <MessageSquare className="absolute right-[20px] top-5 text-black dark:text-white font-semibold " size={20} />
                     </div>
                 </Fade>
 
                 {/* Submit Button */}
                 <Fade direction="right" delay={1200} cascade damping={1e-1} triggerOnce={true}>
-                    <Button className="flex items-center gap-x-1 max-w-[165px]">
-                        Let&copy;s Talk
-                        <ArrowRightIcon size={20} />
+                    <Button className="hover:bg-black hover:text-white dark:hover:bg-lime-500 dark:hover:text-white dark:bg-blue-600 px-4 py-2 bg-red-300 rounded-md">
+                        Just Submit
                     </Button>
                 </Fade>
             </form>

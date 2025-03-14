@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <main className="px-5">
       <Hero />
-      <Services />
+      {/* <Services /> */}
       <Features />
       <Reviews />
       <Faq />

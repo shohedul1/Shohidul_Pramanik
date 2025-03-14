@@ -225,12 +225,15 @@ const Portfolio = () => {
       : project.category === category;
   })
 
-  const title = "section-title mb-8 xl:mb-16 text-center mx-auto";
   return (
-    <section className=" min-h-screen pt-12 mb-40">
+    <section className="min-h-screen mb-40">
       <div className="container mx-auto">
         <Fade direction='up' delay={400} cascade damping={1e-1} triggerOnce={true}>
-          <h2 className={title}>My Portfolio</h2>
+          <div className="flex items-center justify-center pb-2">
+            <div className="text-4xl sm:text-5xl  md:text-6xl lg:text-6xl xl:text-7xl uppercase font-semibold mb-4 tracking-[4px] bg-gradient-to-r text-center from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
+              My Portfolio
+            </div>
+          </div>
         </Fade>
         <Tabs defaultValue={category} className="mb-24 xl:mb-48">
           <Fade direction='up' delay={600} cascade damping={1e-1} triggerOnce={true}>

@@ -12,7 +12,7 @@ const TypeWriter = () => {
             before:absolute before:inset-0 before:bg-[conic-gradient(from_0deg,#ff0000,#ff9900,#33cc33,#0099ff,#9900cc,#ff0000)] 
             before:animate-custom-spin before:rounded-xl before:z-0 before:will-change-transform"
             >
-                <div className="relative w-full bg-white dark:bg-gray-800 dark:text-white p text-black  rounded-xl z-10">
+                <div className="relative w-full bg-white dark:bg-gray-800 dark:text-white text-black  rounded-xl z-10">
                     <div
                         className="text-lg font-bold  w-full md:h-[150px] h-[190px]  p-5 border rounded-md "
                         onMouseEnter={() => typewriterRef.current?.pause()}

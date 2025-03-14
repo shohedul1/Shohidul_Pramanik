@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${SenFont.className} overflow-x-hidden overflow-y-auto`}>
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <Header />
           <main className="mt-20 px-5">{children}</main> {/* Added margin to prevent content from hiding behind the header */}
           <div className="container">
