@@ -2,7 +2,7 @@ import { Fade } from "react-awesome-reveal";
 import { motion } from "framer-motion";
 import Link from 'next/link';
 import Sebscribe from "./Sebscribe";
-import Button from "../../button/Button";
+import MainButton from "../../MainButton/MainButton";
 
 const FirstDesing = () => {
     return (
@@ -25,14 +25,12 @@ const FirstDesing = () => {
                             </p>
 
                             <div className="flex justify-center gap-8 sm:gap-10">
-
-
                                 <motion.button
                                     whileHover={{ scale: 1.1 }}
                                     animate={{ y: [0, -5, 0] }}
                                     transition={{ repeat: Infinity, duration: 1, ease: "easeInOut" }}
                                 >
-                                    <Button text="Contact Now" href="/contact" />
+                                    <MainButton text="Contact Now" href="/contact" />
                                 </motion.button>
                                 <motion.button
                                     whileHover={{ scale: 1.1 }}

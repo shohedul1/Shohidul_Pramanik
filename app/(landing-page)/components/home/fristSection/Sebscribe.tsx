@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
 import { Fade } from "react-awesome-reveal";
-import SubscriptButton from '../../button/SubscriptButton';
+import SubscriptButton from '../../MainButton/SubscriptButton';
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
 

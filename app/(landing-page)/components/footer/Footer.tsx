@@ -49,7 +49,7 @@ const Footer = () => {
                     <Link
                       key={item.id}
                       href={item.path}
-                      className="text-xl text-blue-500 font-bold hover:text-red-500 "
+                      className="text-xl text-blue-500 dark:text-white  font-bold hover:text-red-500 dark:hover:text-red-500 "
                     >
                       {item.name}
                     </Link>
@@ -66,8 +66,8 @@ const Footer = () => {
             before:absolute before:inset-0 before:bg-[conic-gradient(from_0deg,#ff9900,#FFFF00,#FF0000)] 
             before:animate-custom-spin before:rounded-xl before:z-0 before:will-change-transform"
             >
-              <div className="bg-slate-50  relative rounded-tl-[50px] rounded-tr-[50px] dark:bg-gray-900 text-gray-700 dark:text-gray-300 w-full text-center py-4">
-                <p className="text-lg md:text-xl">&copy; 2025 Your Name. All rights reserved.</p>
+              <div className="bg-slate-50  relative rounded-tl-[50px] rounded-tr-[50px] dark:bg-gray-100 text-gray-700 dark:text-gray-300 w-full text-center py-4">
+                <p className="text-lg md:text-xl text-sky-400">&copy; 2025 Your Name. All rights reserved.</p>
               </div>
 
             </div>
