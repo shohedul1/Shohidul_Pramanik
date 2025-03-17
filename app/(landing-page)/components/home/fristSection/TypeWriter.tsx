@@ -22,7 +22,7 @@ const TypeWriter = () => {
                             onInit={(typewriter) => {
                                 typewriterRef.current = typewriter;
                                 typewriter
-                                    .typeString('<span class="text-lime-700">Proficient in React.js, Next.js, TailwindCSS, shadcn/ui, Bootstrap, Material UI, and Framer Motion, ensuring highly interactive UI/UX design.</span>')
+                                    .typeString('<span class="text-lime-500">Proficient in React.js, Next.js, TailwindCSS, shadcn/ui, Bootstrap, Material UI, and Framer Motion, ensuring highly interactive UI/UX design.</span>')
                                     .pauseFor(2000)
                                     .deleteAll()
                                     .typeString('<span class="text-blue-400">State Management: Experienced in Redux, Redux Toolkit, Zustand, and React Context API for efficient global state management.</span>')

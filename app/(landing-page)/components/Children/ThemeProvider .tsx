@@ -1,6 +1,7 @@
+// ThemeProvider.tsx
 "use client";
 
-import * as React from "react";
+import React, { useEffect, useState } from "react";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { type ThemeProviderProps } from "next-themes/dist/types";
 
@@ -19,20 +20,19 @@ const colors = [
 ];
 
 export function ThemeProvider({ children, ...props }: ProviderProps) {
-  const [bgColor, setBgColor] = React.useState(colors[0]);
+  const [bgColor, setBgColor] = useState(colors[0]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const interval = setInterval(() => {
-      const randomColor = colors[Math.floor(Math.random() * colors.length)];
-      setBgColor(randomColor);
-    }, 3000); // Change color every 3 seconds
+      setBgColor(colors[Math.floor(Math.random() * colors.length)]);
+    }, 5000); // Change color every 5 seconds
 
     return () => clearInterval(interval);
   }, []);
 
   return (
     <NextThemesProvider {...props}>
-      <div className={`relative transition-all duration-500 ${bgColor} `}>
+      <div className={`min-h-screen ${bgColor} transition-colors duration-1000`}>
         {children}
       </div>
     </NextThemesProvider>

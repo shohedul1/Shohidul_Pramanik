@@ -41,7 +41,7 @@ const Sebscribe = () => {
                             <Input
                                 type='email'
                                 name='email'
-                                className='dark:placeholder:text-white'
+                                className='dark:placeholder:text-white outline-none border border-red-400'
                                 placeholder='Enter Your Email ...'
                                 value={email}
                                 onChange={(e) => {

@@ -13,6 +13,13 @@ const SenFont = Sen({ subsets: ["latin"], weight: ["400", "600", "700"], display
 export const metadata: Metadata = {
   title: "Shohidul Pramanik",
   description: "Shohidul Pramanik",
+  keywords: ["Shohidul Pramanik", "Web Developer", "MERN Stack", "Next.js"],
+  authors: [{ name: "Shohidul Pramanik", url: "https://yourwebsite.com" }], // Use authors array
+  openGraph: {
+    title: "Shohidul Pramanik | Web Developer",
+    description: "Showcasing projects and skills in web development.",
+    images: ["/logo.svg"],
+  },
   icons: {
     icon: '/logo.svg'
   }
