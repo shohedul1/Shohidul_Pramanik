@@ -56,7 +56,7 @@ export default function AuthPage() {
     return (
         <>
             <div className="flex items-center justify-center ">
-                <Card className="w-full max-w-sm shadow-lg border border-gray-200 rounded-lg">
+                <Card className="w-full max-w-sm shadow-lg border border-gray-200 dark:bg-gray-300 bg-white rounded-lg">
                     <CardHeader className="text-center">
                         <CardTitle className="text-lg font-semibold">
                             {isLogin ? "Login" : "Sign Up"}
@@ -89,11 +89,11 @@ function LoginForm() {
 
     return (
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-            <Input placeholder="Email" {...register("email")} />
+            <Input placeholder="Email" {...register("email")} className="placeholder:text-black dark:placeholder:text-white " />
             {errors.email?.message && <p className="text-red-500 text-xs">{String(errors.email.message)}</p>}
 
             <div className="relative">
-                <Input type={showPassword ? "text" : "password"} placeholder="Password" {...register("password")} />
+                <Input type={showPassword ? "text" : "password"} className="placeholder:text-black dark:placeholder:text-white " placeholder="Password" {...register("password")} />
                 <button type="button" className="absolute right-3 top-3" onClick={() => setShowPassword(!showPassword)}>
                     {showPassword ? <EyeOff /> : <Eye />}
                 </button>
@@ -110,7 +110,7 @@ function LoginForm() {
                 {errors.role && <p className="text-red-500 text-xs">{String(errors.role.message)}</p>}
             </div>
 
-            <motion.button
+            <motion.div
                 whileHover={{ scale: 1.1 }}
                 animate={{ y: [0, -5, 0] }}
                 transition={{ repeat: Infinity, duration: 1, ease: "easeInOut" }}
@@ -118,7 +118,7 @@ function LoginForm() {
 
             >
                 <MainButton text="Login" type="submit" className="w-full" />
-            </motion.button>
+            </motion.div>
         </form>
     );
 }
@@ -134,14 +134,14 @@ function SignupForm() {
 
     return (
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-            <Input placeholder="Name" {...register("name")} />
+            <Input placeholder="Name" {...register("name")} className="placeholder:text-black dark:placeholder:text-white " />
             {errors.name?.message && <p className="text-red-500 text-xs">{String(errors.name.message)}</p>}
 
-            <Input placeholder="Email" {...register("email")} />
+            <Input placeholder="Email" {...register("email")} className="placeholder:text-black dark:placeholder:text-white " />
             {errors.email?.message && <p className="text-red-500 text-xs">{String(errors.email.message)}</p>}
 
             <div className="relative">
-                <Input type={showPassword ? "text" : "password"} placeholder="Password" {...register("password")} />
+                <Input type={showPassword ? "text" : "password"} placeholder="Password" {...register("password")} className="placeholder:text-black dark:placeholder:text-white " />
                 <button type="button" className="absolute right-3 top-3" onClick={() => setShowPassword(!showPassword)}>
                     {showPassword ? <EyeOff /> : <Eye />}
                 </button>
@@ -149,7 +149,7 @@ function SignupForm() {
             {errors.password?.message && <p className="text-red-500 text-xs">{String(errors.password.message)}</p>}
 
             <div className="relative">
-                <Input type={showConfirmPassword ? "text" : "password"} placeholder="Confirm Password" {...register("confirmPassword")} />
+                <Input type={showConfirmPassword ? "text" : "password"} placeholder="Confirm Password" {...register("confirmPassword")} className="placeholder:text-black dark:placeholder:text-white " />
                 <button type="button" className="absolute right-3 top-3" onClick={() => setShowConfirmPassword(!showConfirmPassword)}>
                     {showConfirmPassword ? <EyeOff /> : <Eye />}
                 </button>
@@ -166,7 +166,7 @@ function SignupForm() {
                 {errors.role && <p className="text-red-500 text-xs">{String(errors.role.message)}</p>}
             </div>
 
-            <motion.button
+            <motion.div
                 whileHover={{ scale: 1.1 }}
                 animate={{ y: [0, -5, 0] }}
                 transition={{ repeat: Infinity, duration: 1, ease: "easeInOut" }}
@@ -174,7 +174,7 @@ function SignupForm() {
 
             >
                 <MainButton text="Sign Up" type="submit" className="w-full" />
-            </motion.button>
+            </motion.div>
 
         </form>
     );
