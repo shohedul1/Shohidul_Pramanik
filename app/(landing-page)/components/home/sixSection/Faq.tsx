@@ -35,7 +35,7 @@ const Faq = () => {
           <Fade direction="up" delay={420} cascade damping={0.1} triggerOnce>
             <div className="flex items-center justify-center">
               <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl uppercase font-semibold mb-4 tracking-[4px] bg-gradient-to-r text-center from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
-                Our Studio
+                My Studio
               </h2>
             </div>
           </Fade>
