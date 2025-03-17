@@ -117,7 +117,7 @@ const Hero = () => {
               <div className="flex flex-col gap-5">
                 <Fade direction="up" delay={620} cascade damping={0.1} triggerOnce>
                   <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl text-center bg-gradient-to-r from-blue-600 via-red-500 to-indigo-400 inline-block text-transparent bg-clip-text">
-                    Let's make web Application!
+                    Let&apos;s make web Application!
                   </h1>
                 </Fade>
                 <Fade direction="up" delay={800} cascade damping={0.1} triggerOnce>
