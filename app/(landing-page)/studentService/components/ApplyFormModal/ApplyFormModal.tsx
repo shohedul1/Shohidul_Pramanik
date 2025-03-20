@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Notification from "@/app/(landing-page)/components/Notification/Notification";
+import MainButton from "@/app/(landing-page)/components/MainButton/MainButton";
 
 const ApplyFormModal = ({
   open,
@@ -72,7 +73,15 @@ const ApplyFormModal = ({
               <Input type="email" name="email" value={formData.email} placeholder="Your Email" required onChange={handleChange} />
               <Input type="text" name="phone" value={formData.phone} placeholder="Your Phone" required onChange={handleChange} />
 
-              <Button type="submit" className="w-full">Submit Application</Button>
+              <motion.div
+                whileHover={{ scale: 1.1 }}
+                animate={{ y: [0, -5, 0] }}
+                transition={{ repeat: Infinity, duration: 1, ease: "easeInOut" }}
+                className="w-full  relative"
+
+              >
+                <MainButton text="Submit Application" type="submit" className="w-full" />
+              </motion.div>
             </form>
 
             <DialogClose asChild>

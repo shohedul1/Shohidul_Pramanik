@@ -49,7 +49,7 @@ const projectData = [
   },
   {
     image: '/work/benner.png',
-    category: 'Fashion',
+    category: 'portraits',
     name: "Mordan Landing page",
     description: 'Shoot Data: 13/01/2024',
     link: 'https://building-a-responsive-hosting-website.vercel.app',
@@ -57,7 +57,7 @@ const projectData = [
   },
   {
     image: '/work/Lingo.png',
-    category: 'Fashion',
+    category: 'portraits',
     name: "Mordan web code page",
     description: 'Shoot Data: 13/01/2024',
     link: 'https://lingo-lac.vercel.app',
@@ -81,7 +81,7 @@ const projectData = [
   },
   {
     image: '/work/FigmaConvert.png',
-    category: 'Fashion',
+    category: 'product',
     name: "Mordan web DESING",
     description: 'Shoot Data: 13/01/2024',
     link: 'https://figma-convert.vercel.app',
@@ -89,7 +89,7 @@ const projectData = [
   },
   {
     image: '/work/Job_Template.png',
-    category: 'Fashion',
+    category: 'product',
     name: "Mordan Job web",
     description: 'Shoot Data: 13/01/2024',
     link: 'https://jobportalyt.vercel.app',
@@ -113,7 +113,7 @@ const projectData = [
   },
   {
     image: '/work/Ecommerce.png',
-    category: 'Fashion',
+    category: 'product',
     name: "Ecommerce desing web app",
     description: 'Shoot Data: 13/01/2024',
     link: 'https://ecommer-desing.vercel.app',
@@ -121,7 +121,7 @@ const projectData = [
   },
   {
     image: '/work/bookStore.png',
-    category: 'Fashion',
+    category: 'product',
     name: "Mordan BOOK STORE WEB app",
     description: 'Shoot Data: 13/01/2024',
     link: 'https://vite-mern-stact.vercel.app',
@@ -137,7 +137,7 @@ const projectData = [
   },
   {
     image: '/work/Tranquind.png',
-    category: 'Fashion',
+    category: 'product',
     name: "Mordan Portfolio my app",
     description: 'Shoot Data: 13/01/2024',
     link: 'https://tranquil-alpaca-844f23.netlify.app',
@@ -237,7 +237,7 @@ const Portfolio = () => {
         </Fade>
         <Tabs defaultValue={category} className="mb-24 xl:mb-48">
           <Fade direction='up' delay={600} cascade damping={1e-1} triggerOnce={true}>
-            <TabsList className="w-full grid h-full md:grid-cols-4 lg:max-w-[740px] mb-12 mx-auto md:border dark:border-none">
+            <TabsList className="w-full grid h-full grid-cols-2 md:grid-cols-4 lg:max-w-[740px] mb-12 mx-auto md:border dark:border-none">
               {
                 categories.map((category, index) => {
                   return (

@@ -33,10 +33,13 @@ export default function RootLayout({
       <body className={`${SenFont.className} overflow-x-hidden overflow-y-auto`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <Header />
-          <main className="mt-20 px-5">{children}</main> {/* Added margin to prevent content from hiding behind the header */}
-          <div className="container">
-            <Footer />
-          </div>
+          <main className="mt-10 px-5">
+            {children}
+            <div className="container">
+              <Footer />
+            </div>
+          </main> {/* Added margin to prevent content from hiding behind the header */}
+
           <Toaster />
           <ScrollToTop />
         </ThemeProvider>

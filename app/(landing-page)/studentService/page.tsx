@@ -51,23 +51,33 @@ const StudentPage = () => {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: index * 0.2, duration: 0.5 }}
                         >
-                            <Card className="shadow-md hover:shadow-xl transition-all">
+                            <Card className="shadow-md hover:shadow-xl transition-all py-5 px-5">
                                 <CardHeader>
                                     <CardTitle className="text-xl">{plan.duration}</CardTitle>
                                 </CardHeader>
                                 <CardContent>
                                     <p className="text-lg font-bold text-gray-700 dark:text-gray-300">{plan.price}</p>
-                                    <ul className="mt-4 text-gray-600 dark:text-gray-400">
+                                    <ul className=" text-gray-600 dark:text-gray-400">
                                         {plan.languages.map((lang, idx) => (
                                             <li key={idx}>✅ {lang}</li>
                                         ))}
                                     </ul>
-                                    <Button
-                                        onClick={() => handleApplyClick(plan.duration)}
-                                        className="mt-4 w-full"
+
+                                    <motion.div
+                                        whileHover={{ scale: 1.1 }}
+                                        animate={{ y: [0, -5, 0] }}
+                                        transition={{ repeat: Infinity, duration: 1, ease: "easeInOut" }}
+                                        className="w-full  flex items-center justify-center flex-col"
+
                                     >
-                                        Apply Now
-                                    </Button>
+                                        <Button
+                                            onClick={() => handleApplyClick(plan.duration)}
+                                            className="mt-4 w-full py-2 font-bold text-xl"
+                                        >
+                                            Apply Now
+                                        </Button>
+                                        {/* <MainButton text="Submit Application" type="submit" className="w-full" /> */}
+                                    </motion.div>
                                 </CardContent>
                             </Card>
                         </motion.div>
