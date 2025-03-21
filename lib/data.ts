@@ -9,7 +9,7 @@ import { FaSass } from "react-icons/fa";
 import { SiVite } from "react-icons/si";
 import { FaAvianex } from "react-icons/fa6";
 import { FaStripe, FaPaypal, FaCcVisa, FaCreditCard } from "react-icons/fa"; // Use FaCreditCard for Razorpay
-import { FaCheckCircle, FaRocket, FaStar, FaHeadset, FaClipboardList, FaRegHandshake } from 'react-icons/fa';
+import { FaRocket, FaHeadset, FaClipboardList, FaRegHandshake } from 'react-icons/fa';
 
 
 import { TbBrandNextjs, TbBrandRedux } from "react-icons/tb";
@@ -119,6 +119,23 @@ export const servicesData = [
     }
 
 ];
+
+export interface LoginData {
+    email: string;
+    password: string;
+    role: "student" | "client" | "admin";
+}
+
+export interface SignupData {
+    name: string;
+    email: string;
+    password: string;
+    confirmPassword: string;
+    role: "student" | "client" | "admin"; // Restricting role to the three possible values
+};
+
+
+
 
 
 

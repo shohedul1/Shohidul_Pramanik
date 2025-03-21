@@ -62,7 +62,7 @@ const Footer = () => {
           </div>
 
           <Fade direction="right" delay={600} cascade damping={0.1} triggerOnce={true}>
-            <div className="relative w-full p-1 rounded-xl overflow-hidden
+            <div className="relative w-full p-1 rounded-tl-[50px] rounded-tr-[50px] overflow-hidden
             before:absolute before:inset-0 before:bg-[conic-gradient(from_0deg,#ff9900,#FFFF00,#FF0000)] 
             before:animate-custom-spin before:rounded-xl before:z-0 before:will-change-transform"
             >

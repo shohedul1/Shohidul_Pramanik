@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 const LoginButton = () => {
     return (
-        <Link href={"/loginSignup"}>
+        <Link href={"/author/login"}>
             <div className="relative w-[75px] h-[75px] flex items-center justify-center  rounded-full overflow-hidden
         before:absolute before:inset-0 before:bg-[conic-gradient(from_0deg,#fff550,#3cb371,#33cc33,#0099ff,#ff0000,#fff)] 
         before:animate-custom-spin before:rounded-full before:z-0 before:will-change-transform"

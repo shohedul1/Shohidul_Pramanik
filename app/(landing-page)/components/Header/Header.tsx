@@ -18,6 +18,10 @@ const Header = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+
+
+
+
     return (
         <header
             className={`${header
@@ -33,7 +37,7 @@ const Header = () => {
                     </Fade>
 
                     {/* Navigation */}
-                    <div className="flex items-center gap-x-6 justify-center">
+                    <div className="flex items-caenter gap-x-6 justify-center">
                         <Nav className="flex gap-2 items-center justify-center" />
                         <div className='hidden md:block'>
                             <ModeToggle />
