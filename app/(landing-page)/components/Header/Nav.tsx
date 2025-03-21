@@ -1,25 +1,29 @@
 'use client';
-import React, { FC } from 'react';
-import { useRouter } from 'next/navigation';
+import React, { FC, useEffect, useState } from 'react';
 import { Fade } from 'react-awesome-reveal';
 import AboutButton from './buttonComponents/AboutButton/AboutButton';
 import { ServiceButton } from './buttonComponents/ServiceButton/ServiceButton';
 import LoginButton from './buttonComponents/LoginButton/LoginButton';
-import { userAuthStore } from '@/app/store/useAuthStore';
 
 interface NavProps {
   className?: string;
   closeSheet?: () => void;
 }
 
-const Nav: FC<NavProps> = ({ className, closeSheet }) => {
-  const router = useRouter();
-  const token = localStorage.getItem("token");
+const Nav: FC<NavProps> = ({ className }) => {
+  const [token, setToken] = useState<string | null>(null);
+
+  useEffect(() => {
+    // Ensure this runs only on the client side
+    const storedToken = typeof window !== "undefined" ? localStorage.getItem("token") : null;
+    setToken(storedToken);
+  }, []);
 
   // Logout function
   const handleLogout = () => {
-    localStorage.removeItem("token"); // Remove token
-    window.location.reload()// Redirect to home page
+    localStorage.removeItem("token");
+    setToken(null);
+    window.location.reload(); // Refresh the page after logout
   };
 
   return (
@@ -34,7 +38,10 @@ const Nav: FC<NavProps> = ({ className, closeSheet }) => {
 
         {token ? (
           <Fade direction="left" delay={900} cascade damping={0.5} triggerOnce>
-            <button onClick={handleLogout} className='py-2 px-4 bg-red-500 text-white rounded-md'>
+            <button
+              onClick={handleLogout}
+              className='py-2 px-4 bg-red-500 text-white rounded-md'
+            >
               Logout
             </button>
           </Fade>
