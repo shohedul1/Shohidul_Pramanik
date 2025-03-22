@@ -71,14 +71,14 @@ export function ServiceButton() {
                     <Link href={"/clientService"}>
                         <DropdownMenuItem>
                             <User className="text-amber-200" />
-                            <span>Client Service</span>
+                            <span>Client Offer</span>
                             <DropdownMenuShortcut>⇧⌘C</DropdownMenuShortcut>
                         </DropdownMenuItem>
                     </Link>
                     <Link href={"/studentService"}>
                         <DropdownMenuItem>
                             <CreditCard className="text-yellow-600 " />
-                            <span>Student Service</span>
+                            <span>Student Offer</span>
                             <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
                         </DropdownMenuItem>
                     </Link>
@@ -93,20 +93,13 @@ export function ServiceButton() {
                     <Link href={"/pricing"}>
                         <DropdownMenuItem>
                             <IoIosPricetag className="text-teal-400" />
-                            <span>Pricing</span>
+                            <span>Client Choice</span>
                             <DropdownMenuShortcut>⌘K</DropdownMenuShortcut>
                         </DropdownMenuItem>
                     </Link>
                 </DropdownMenuGroup>
                 <DropdownMenuGroup>
-                    <Link href={"/technology"}>
-                        <DropdownMenuItem>
-                            <GrTechnology className="text-orange-600" />
-                            <span>
-                                My technology
-                            </span>
-                        </DropdownMenuItem>
-                    </Link>
+                    
 
                     <DropdownMenuSub>
                         <DropdownMenuSubTrigger>

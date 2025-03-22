@@ -1,5 +1,4 @@
 "use client";
-import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Star } from "lucide-react";
 
@@ -21,7 +20,11 @@ const StudentReview = () => {
     return (
         <div className={`container`}>
             <div className="max-w-5xl mx-auto">
-                <h2 className="text-3xl font-bold text-center mb-6">Student Reviews</h2>
+                <div className="flex flex-col items-center justify-center">
+                    <h1 className="text-xl md:text-5xl text-center mb-6 uppercase font-semibold bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
+                        Student Reviews
+                    </h1>
+                </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {reviews.map((review) => (

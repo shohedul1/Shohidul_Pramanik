@@ -3,7 +3,6 @@
 import { useEffect, useState } from 'react';
 import Logo from './buttonComponents/Logo/Logo';
 import Nav from './Nav';
-import { ModeToggle } from './buttonComponents/LogoutButton/ModeToggle';
 import { Fade } from 'react-awesome-reveal';
 
 const Header = () => {

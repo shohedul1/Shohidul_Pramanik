@@ -12,20 +12,9 @@ interface NavProps {
 }
 
 const Nav: FC<NavProps> = ({ className }) => {
-  const [token, setToken] = useState<string | null>(null);
+  
 
-  useEffect(() => {
-    // Ensure this runs only on the client side
-    const storedToken = typeof window !== "undefined" ? localStorage.getItem("token") : null;
-    setToken(storedToken);
-  }, []);
-
-  // Logout function
-  const handleLogout = () => {
-    localStorage.removeItem("token");
-    setToken(null);
-    window.location.reload(); // Refresh the page after logout
-  };
+  
 
   return (
     <nav className={`${className}`}>
@@ -37,15 +26,11 @@ const Nav: FC<NavProps> = ({ className }) => {
           <AboutButton />
         </Fade>
 
-        {token ? (
-          <Fade direction="left" delay={900} cascade damping={0.5} triggerOnce>
-            <LogoutButton handleLogout={handleLogout} />
-          </Fade>
-        ) : (
-          <Fade direction="left" delay={900} cascade damping={0.5} triggerOnce>
-            <LoginButton />
-          </Fade>
-        )}
+
+        <Fade direction="left" delay={900} cascade damping={0.5} triggerOnce>
+          <LogoutButton />
+        </Fade>
+
       </div>
     </nav>
   );

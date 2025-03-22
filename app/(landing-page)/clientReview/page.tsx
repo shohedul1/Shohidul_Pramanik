@@ -19,11 +19,13 @@ const reviews = [
 
 const ClientReviews = () => {
     return (
-        <section className="py-10 px-5 sm:px-10 bg-gray-100 container dark:bg-gray-900 transition-colors">
+        <section className="container ">
             <div className="max-w-5xl mx-auto">
-                <h2 className="text-2xl sm:text-3xl font-semibold text-center text-gray-900 dark:text-white mb-6">
-                    What Our Clients Say
-                </h2>
+                <div className="flex flex-col items-center justify-center">
+                    <h1 className="text-xl md:text-5xl text-center mb-6 uppercase font-semibold bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
+                        Client Review
+                    </h1>
+                </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {reviews.map((client, index) => (

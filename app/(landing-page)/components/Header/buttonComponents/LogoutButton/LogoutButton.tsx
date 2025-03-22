@@ -22,28 +22,23 @@ import {
     DropdownMenuGroup,
     DropdownMenuItem,
     DropdownMenuLabel,
-    DropdownMenuPortal,
     DropdownMenuSeparator,
     DropdownMenuShortcut,
-    DropdownMenuSub,
-    DropdownMenuSubContent,
-    DropdownMenuSubTrigger,
+
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { motion } from 'framer-motion';
 import { CgProfile } from "react-icons/cg";
 import Link from "next/link";
-import React, { FC } from 'react';
 import { ModeToggle } from "./ModeToggle";
-import { useTheme } from "next-themes";
+import { GrTechnology } from "react-icons/gr";
+import { FaFacebookSquare } from "react-icons/fa";
 
 
-interface LogoutButtonProps {
-    handleLogout: () => void;
-}
 
-const LogoutButton: FC<LogoutButtonProps> = ({ handleLogout }) => {
-    const { setTheme } = useTheme()
+
+
+const LogoutButton = () => {
 
     return (
         <div>
@@ -65,7 +60,7 @@ const LogoutButton: FC<LogoutButtonProps> = ({ handleLogout }) => {
                                     whileHover={{ scale: 1.1 }}
                                     className="font-bold"
                                 >
-                                    profile
+                                    Profile
                                 </motion.p>
 
                             </button>
@@ -78,20 +73,23 @@ const LogoutButton: FC<LogoutButtonProps> = ({ handleLogout }) => {
                     <DropdownMenuLabel className="flex items-center justify-center">My Account</DropdownMenuLabel>
                     <DropdownMenuSeparator />
                     <DropdownMenuGroup>
-                        <Link href={"/profile"}>
+                        <Link href={"/about"}>
                             <DropdownMenuItem>
-                                <User />
+                                <User className="text-sky-600" />
                                 <span>Profile</span>
                                 <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
                             </DropdownMenuItem>
                         </Link>
+                        <Link href={"/technology"}>
+                            <DropdownMenuItem>
+                                <GrTechnology className="text-orange-600" />
+                                <span>
+                                    My Technology
+                                </span>
+                            </DropdownMenuItem>
+                        </Link>
                         <DropdownMenuItem>
-                            <CreditCard />
-                            <span>Billing</span>
-                            <DropdownMenuShortcut>⌘B</DropdownMenuShortcut>
-                        </DropdownMenuItem>
-                        <DropdownMenuItem>
-                            <Settings />
+                            <Settings className="text-lime-500" />
                             <span>
                                 <ModeToggle />
                             </span>
@@ -103,62 +101,33 @@ const LogoutButton: FC<LogoutButtonProps> = ({ handleLogout }) => {
                             <DropdownMenuShortcut>⌘K</DropdownMenuShortcut>
                         </DropdownMenuItem>
                     </DropdownMenuGroup>
-                    <DropdownMenuSeparator />
-                    <DropdownMenuGroup>
+
+                    <Link href={"https://github.com/shohedul1?tab=repositories"} target="_blank" rel="noopener noreferrer">
                         <DropdownMenuItem>
-                            <Users />
-                            <span>Team</span>
+                            <Github className="text-black bg-white rounded-full" />
+                            <span>GitHub</span>
                         </DropdownMenuItem>
-                        <DropdownMenuSub>
-                            <DropdownMenuSubTrigger>
-                                <UserPlus />
-                                <span>Invite users</span>
-                            </DropdownMenuSubTrigger>
-                            <DropdownMenuPortal>
-                                <DropdownMenuSubContent>
-                                    <DropdownMenuItem>
-                                        <Mail />
-                                        <span>Email</span>
-                                    </DropdownMenuItem>
-                                    <DropdownMenuItem>
-                                        <MessageSquare />
-                                        <span>Message</span>
-                                    </DropdownMenuItem>
-                                    <DropdownMenuSeparator />
-                                    <DropdownMenuItem>
-                                        <PlusCircle />
-                                        <span>More...</span>
-                                    </DropdownMenuItem>
-                                </DropdownMenuSubContent>
-                            </DropdownMenuPortal>
-                        </DropdownMenuSub>
+                    </Link>
+                    <Link href={"https://www.facebook.com/sshohedul.islam"} target="_blank" rel="noopener noreferrer">
                         <DropdownMenuItem>
-                            <Plus />
-                            <span>New Team</span>
-                            <DropdownMenuShortcut>⌘+T</DropdownMenuShortcut>
+                            <FaFacebookSquare className=" bg-blue-500 text-white rounded-full" />
+                            <span>Facebook</span>
                         </DropdownMenuItem>
-                    </DropdownMenuGroup>
-                    <DropdownMenuSeparator />
-                    <DropdownMenuItem>
-                        <Github />
-                        <span>GitHub</span>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem>
-                        <LifeBuoy />
-                        <span>Support</span>
-                    </DropdownMenuItem>
+                    </Link>
+                    
+
+                    <Link href={"/contact"}>
+                        <DropdownMenuItem>
+                            <LifeBuoy className="text-yellow-600" />
+                            <span>Support</span>
+                        </DropdownMenuItem>
+                    </Link>
                     <DropdownMenuItem disabled>
                         <Cloud />
                         <span>API</span>
                     </DropdownMenuItem>
                     <DropdownMenuSeparator />
-                    <button onClick={handleLogout} className="w-full">
-                        <DropdownMenuItem>
-                            <LogOut />
-                            <span>Log out</span>
-                            <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
-                        </DropdownMenuItem>
-                    </button>
+
                 </DropdownMenuContent>
             </DropdownMenu>
         </div>

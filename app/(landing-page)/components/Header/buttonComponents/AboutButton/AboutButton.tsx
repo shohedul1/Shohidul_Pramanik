@@ -1,19 +1,12 @@
 import {
-  Cloud,
   CreditCard,
-  LifeBuoy,
-  Github,
-  LogOut,
   Mail,
   MessageSquare,
   Plus,
   PlusCircle,
-  User,
   UserPlus,
 } from "lucide-react";
-import { HandPlatter } from 'lucide-react';
 import { LaptopMinimal } from "lucide-react";
-import { GrTechnology } from "react-icons/gr";
 
 
 
@@ -34,7 +27,6 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import Link from "next/link";
-import { IoIosPricetag } from "react-icons/io";
 import { MdRoundaboutRight } from "react-icons/md";
 import { motion } from "framer-motion"
 
@@ -73,13 +65,7 @@ const AboutButton = () => {
         <DropdownMenuLabel className="text-center">Welcome My About</DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
-          <Link href={"/about"}>
-            <DropdownMenuItem>
-              <User className="text-amber-200" />
-              <span>My Description</span>
-              <DropdownMenuShortcut>⇧⌘C</DropdownMenuShortcut>
-            </DropdownMenuItem>
-          </Link>
+
           <Link href={"/studentReview"}>
             <DropdownMenuItem>
               <CreditCard className="text-yellow-600 " />
@@ -95,41 +81,29 @@ const AboutButton = () => {
               <DropdownMenuShortcut>⌘P</DropdownMenuShortcut>
             </DropdownMenuItem>
           </Link>
-          <Link href={"/pricing"}>
-            <DropdownMenuItem>
-              <IoIosPricetag className="text-teal-400" />
-              <span>Visitor Subscript</span>
-              <DropdownMenuShortcut>⌘K</DropdownMenuShortcut>
-            </DropdownMenuItem>
-          </Link>
         </DropdownMenuGroup>
         <DropdownMenuGroup>
-          <Link href={"/technology"}>
-            <DropdownMenuItem>
-              <GrTechnology className="text-orange-600" />
-              <span>
-                My technology
-              </span>
-            </DropdownMenuItem>
-          </Link>
-
           <DropdownMenuSub>
             <DropdownMenuSubTrigger>
-              <UserPlus />
-              <span>Invite users</span>
+              <UserPlus  className="text-lime-500"/>
+              <span>Customer support</span>
             </DropdownMenuSubTrigger>
             <DropdownMenuPortal>
               <DropdownMenuSubContent>
-                <DropdownMenuItem>
-                  <Mail />
-                  <span>Email</span>
-                </DropdownMenuItem>
-                <Link href={"/contact"}>
+
+                <Link href="mailto:shohidulpramanik94@gmail.com" className="w-full">
                   <DropdownMenuItem>
-                    <MessageSquare />
-                    <span>Message</span>
+                    <Mail className="text-emerald-500" />
+                    <span>Email</span>
                   </DropdownMenuItem>
                 </Link>
+
+                <a href="https://wa.me/8801758225368?text=Hello%20Support%2C%20I%20need%20help!" target="_blank" rel="noopener noreferrer" className="w-full">
+                  <DropdownMenuItem>
+                    <MessageSquare className="text-lime-600" />
+                    <span>WhatsApp Support</span>
+                  </DropdownMenuItem>
+                </a>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem>
                   <PlusCircle />
