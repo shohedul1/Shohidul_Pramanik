@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import Application from "@/models/Application";
-import connectDb from "@/config/bd";
+import connectDb from "@/config/connectDb";
 
 export async function POST(req: NextRequest) {
     await connectDb();

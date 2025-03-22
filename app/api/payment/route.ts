@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import Payment from "@/models/Payment"; // Import your Mongoose model
-import connectDb from "@/config/bd";
+import connectDb from "@/config/connectDb";
 
 export async function POST(req: Request) {
   try {
