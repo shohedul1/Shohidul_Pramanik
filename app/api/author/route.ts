@@ -4,6 +4,9 @@ import User from "@/models/User";
 import jwt from "jsonwebtoken";
 
 const JWT_SECRET = process.env.JWT_SECRET || "default_secret_key";
+interface CustomJwtPayload extends jwt.JwtPayload {
+    userId: string;
+}
 
 export async function GET(req: NextRequest) {
     try {
@@ -15,7 +18,7 @@ export async function GET(req: NextRequest) {
         }
 
         const token = authHeader.split(" ")[1];
-        const decoded = jwt.verify(token, JWT_SECRET);
+        const decoded = jwt.verify(token, JWT_SECRET) as CustomJwtPayload;
         console.log(decoded)
 
         const user = await User.findById(decoded.userId).select("-password");
