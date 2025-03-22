@@ -1,9 +1,8 @@
 'use client';
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC} from 'react';
 import { Fade } from 'react-awesome-reveal';
 import AboutButton from './buttonComponents/AboutButton/AboutButton';
 import { ServiceButton } from './buttonComponents/ServiceButton/ServiceButton';
-import LoginButton from './buttonComponents/LoginButton/LoginButton';
 import LogoutButton from './buttonComponents/LogoutButton/LogoutButton';
 
 interface NavProps {
