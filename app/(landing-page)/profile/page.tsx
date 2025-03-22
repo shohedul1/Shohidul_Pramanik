@@ -6,11 +6,10 @@ import { motion } from "framer-motion";
 import { Pencil } from "lucide-react";
 
 const Profile = () => {
-  const { authUser, checkAuth, checkAuthLoader, updateUser } = userAuthStore();
+  const { authUser, checkAuth, checkAuthLoader } = userAuthStore();
   const router = useRouter();
   const [isAuthChecked, setIsAuthChecked] = useState(false);
-  const [imageFile, setImageFile] = useState<File | null>(null);
-  const [isUploading, setIsUploading] = useState(false);
+
 
   // Check authentication on mount
   useEffect(() => {
@@ -24,48 +23,9 @@ const Profile = () => {
   }, [isAuthChecked, authUser, checkAuthLoader]);
 
   // Handle image selection
-  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      setImageFile(file);
-      handleImageUpload(file); // Call the upload function after selecting the image
-    }
-  };
 
-  // Handle image upload with Fetch
-  const handleImageUpload = async (file: File) => {
-    if (!file) return;
 
-    const formData = new FormData();
-    formData.append("avatar", file);
 
-    try {
-      setIsUploading(true);
-      const response = await fetch("/api/author/uploadImage", {
-        method: "POST",
-        body: formData,
-        headers: {
-          "user-id": authUser?._id || "", // Send user ID in the headers
-        },
-      });
-
-      if (!response.ok) {
-        throw new Error("Failed to upload image");
-      }
-
-      const data = await response.json();
-      const { avatarUrl, user } = data;
-
-      if (user) {
-        // Update the user's avatar URL in the store or state
-        updateUser(user);
-      }
-    } catch (error) {
-      console.error("Error uploading image:", error);
-    } finally {
-      setIsUploading(false);
-    }
-  };
 
   if (!isAuthChecked || checkAuthLoader) return <p>Loading...</p>;
 
@@ -90,14 +50,12 @@ const Profile = () => {
             {/* Hidden file input */}
             <input
               type="file"
-              onChange={handleImageChange}
               accept="image/*"
               className="absolute bottom-1 right-1 opacity-0"
               id="file-input"
             />
             <button
               onClick={() => document.getElementById("file-input")?.click()}
-              disabled={isUploading}
               className="absolute bottom-1 right-1 bg-blue-500 text-white p-1 rounded-full shadow"
             >
               <Pencil size={16} />
