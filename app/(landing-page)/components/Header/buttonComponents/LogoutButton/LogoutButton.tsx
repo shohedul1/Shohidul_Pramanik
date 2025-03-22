@@ -1,8 +1,8 @@
+'use client';
 import {
     Cloud,
     CreditCard,
     Github,
-    HandPlatter,
     Keyboard,
     LifeBuoy,
     LogOut,
@@ -34,7 +34,8 @@ import { motion } from 'framer-motion';
 import { CgProfile } from "react-icons/cg";
 import Link from "next/link";
 import React, { FC } from 'react';
-import { ModeToggle } from "../../ModeToggle";
+import { ModeToggle } from "./ModeToggle";
+import { useTheme } from "next-themes";
 
 
 interface LogoutButtonProps {
@@ -42,6 +43,8 @@ interface LogoutButtonProps {
 }
 
 const LogoutButton: FC<LogoutButtonProps> = ({ handleLogout }) => {
+    const { setTheme } = useTheme()
+
     return (
         <div>
             <DropdownMenu>

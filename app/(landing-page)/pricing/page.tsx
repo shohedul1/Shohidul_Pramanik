@@ -42,62 +42,10 @@ const Pricing = () => {
     setIsModalOpen(false);
     setSelectedPlan(null);
   };
-  const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!);
 
 
-  // Handle the payment completion and log data
-  // const handleCompletePayment = async (e: React.FormEvent) => {
-  //   e.preventDefault();
-  //   const updatedFormData = {
-  //     ...formData,
-  //     planTitle: selectedPlan?.title,
-  //     planPrice: selectedPlan?.price,
-  //   };
-
-  //   try {
-  //     const response = await fetch("/api/payment", {
-  //       method: "POST",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //       body: JSON.stringify(updatedFormData),
-  //     });
-
-  //     if (!response.ok) {
-  //       throw new Error(`HTTP error! Status: ${response.status}`);
-  //     }
-
-  //     const data = await response.json();
-
-  //     if (data.success) {
-  //       toast.success(data.message, { position: 'top-right' });
-  //       setFormData({ cardNumber: "", expiryDate: "", cvv: "" });
-  //       closeModal();
-  //       const stripe = await stripePromise;
-  //       const response = await fetch("/api/checkout", {
-  //           method: "POST",
-  //           headers: { "Content-Type": "application/json" },
-  //           body: JSON.stringify({
-  //               items: updatedFormData,
-  //           }),
-  //       });
-  //       const data = await response.json();
-
-  //       if (response.ok) {
-  //           stripe?.redirectToCheckout({ sessionId: data.id });
-  //       } else {
-  //           throw new Error("Failed to create Stripe Payment");
-  //       }
 
 
-  //     } else {
-  //       toast.error(data.error || "Payment failed", { position: 'top-right' });
-  //     }
-  //   } catch (error) {
-  //     toast.error("Something went wrong. Please try again later.", { position: 'top-right' });
-  //     console.error("Payment error:", error);
-  //   }
-  // };
   const handleCompletePayment = async (e: React.FormEvent) => {
     e.preventDefault();
     const updatedFormData = {

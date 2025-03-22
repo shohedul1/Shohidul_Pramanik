@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import Logo from './buttonComponents/Logo/Logo';
 import Nav from './Nav';
-import { ModeToggle } from './ModeToggle';
+import { ModeToggle } from './buttonComponents/LogoutButton/ModeToggle';
 import { Fade } from 'react-awesome-reveal';
 
 const Header = () => {
@@ -37,13 +37,8 @@ const Header = () => {
                     </Fade>
 
                     {/* Navigation */}
-                    <div className="flex items-caenter gap-x-6 justify-center">
-                        <Nav className="flex gap-2 items-center justify-center" />
-                        <div className='hidden md:block'>
-                            <ModeToggle />
-                        </div>
+                    <Nav className="flex gap-2 items-center justify-center" />
 
-                    </div>
                 </div>
             </div>
         </header>
