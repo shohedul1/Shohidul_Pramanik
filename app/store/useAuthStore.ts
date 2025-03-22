@@ -16,6 +16,7 @@ export const userAuthStore = create<{
     signupLoader: false,
     checkAuthLoader: false,
 
+
     login: async ({ loginData }) => {
         try {
             set({ loginLoader: true });
@@ -30,10 +31,14 @@ export const userAuthStore = create<{
             });
 
             const result = await response.json();
-            localStorage.setItem("token", result.token);
-
             if (response.ok) {
+                localStorage.setItem("token", result.token);
+                set({ authUser: result.user });
                 toast.success(result.message);
+                // Wait 2 seconds before redirecting
+                setTimeout(() => {
+                    window.location.href = '/profile';
+                }, 2000);
             } else {
                 toast.error(result.message || 'Something went wrong');
             }
@@ -60,8 +65,11 @@ export const userAuthStore = create<{
             const result = await response.json();
 
             if (response.ok) {
-                set({ authUser: result.user });
                 toast.success(result.message);
+                // Wait 2 seconds before redirecting
+                setTimeout(() => {
+                    window.location.href = '/author/login';
+                }, 2000);
             } else {
                 toast.error(result.message || 'Something went wrong');
             }
@@ -75,23 +83,39 @@ export const userAuthStore = create<{
 
     checkAuth: async () => {
         set({ checkAuthLoader: true });
+
         try {
+            const token = localStorage.getItem("token");
+            if (!token) {
+                set({ authUser: null });
+                return;
+            }
+
             const response = await fetch('/api/author', {
                 method: 'GET',
-                headers: { 'Content-Type': 'application/json' },
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}` // Send token in headers
+                },
                 credentials: 'include',
             });
+
             const result = await response.json();
             if (response.ok) {
                 set({ authUser: result.user });
             } else {
                 set({ authUser: null });
+                localStorage.removeItem("token"); // Remove invalid token
             }
         } catch (error) {
+            console.error("Error checking auth:", error);
             set({ authUser: null });
+            localStorage.removeItem("token");
         } finally {
             set({ checkAuthLoader: false });
         }
-    },
+    }
+
+
 
 }));

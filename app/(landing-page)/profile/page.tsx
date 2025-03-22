@@ -1,34 +1,38 @@
-'use client';
-
-import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
+"use client";
+import { userAuthStore } from "@/app/store/useAuthStore";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
 const Profile = () => {
-  const [token, setToken] = useState<string | null>(null);
-  const [loading, setLoading] = useState(true);
+  const { authUser, checkAuth, checkAuthLoader } = userAuthStore();
   const router = useRouter();
+  const [isAuthChecked, setIsAuthChecked] = useState(false);
 
+  // Run authentication check only once when the component mounts
   useEffect(() => {
-    const storedToken = typeof window !== "undefined" ? localStorage.getItem("token") : null;
+    checkAuth().finally(() => setIsAuthChecked(true)); // Ensure we wait for auth check
+  }, []);
 
-    if (!storedToken) {
-      console.log("No token found, redirecting to login...");
-      router.push('/author/login'); // Redirect if no token
-    } else {
-      setToken(storedToken);
+  // Redirect **only if** authentication check is completed & user is not authenticated
+  useEffect(() => {
+    if (isAuthChecked && !authUser && !checkAuthLoader) {
+      router.replace("/");
     }
-    
-    setLoading(false);
-  }, [router]);
+  }, [isAuthChecked, authUser, checkAuthLoader]);
 
-  if (loading) return <p>Loading...</p>; // Prevent rendering issues
+  // Show a loading state while authentication is being checked
+  if (!isAuthChecked || checkAuthLoader) return <p>Loading...</p>;
 
-  return token ? (
+  return (
     <div>
-      <h1>Profile</h1>
-      <p>Welcome to your profile!</p>
+      {!isAuthChecked || checkAuthLoader || authUser && (
+        <div>
+          <h1>Welcome, {authUser.name}</h1>
+          <p>Email: {authUser.email}</p>
+        </div>
+      )}
     </div>
-  ) : null;
+  );
 };
 
 export default Profile;

@@ -1,11 +1,5 @@
 import {
-    Cloud,
     CreditCard,
-    LifeBuoy,
-    Github,
-    LogOut,
-    Mail,
-    MessageSquare,
     Plus,
     PlusCircle,
     User,

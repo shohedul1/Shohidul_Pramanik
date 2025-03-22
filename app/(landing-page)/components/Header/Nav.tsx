@@ -4,6 +4,7 @@ import { Fade } from 'react-awesome-reveal';
 import AboutButton from './buttonComponents/AboutButton/AboutButton';
 import { ServiceButton } from './buttonComponents/ServiceButton/ServiceButton';
 import LoginButton from './buttonComponents/LoginButton/LoginButton';
+import LogoutButton from './buttonComponents/LogoutButton/LogoutButton';
 
 interface NavProps {
   className?: string;
@@ -38,12 +39,7 @@ const Nav: FC<NavProps> = ({ className }) => {
 
         {token ? (
           <Fade direction="left" delay={900} cascade damping={0.5} triggerOnce>
-            <button
-              onClick={handleLogout}
-              className='py-2 px-4 bg-red-500 text-white rounded-md'
-            >
-              Logout
-            </button>
+            <LogoutButton handleLogout={handleLogout} />
           </Fade>
         ) : (
           <Fade direction="left" delay={900} cascade damping={0.5} triggerOnce>

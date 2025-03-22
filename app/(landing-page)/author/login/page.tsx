@@ -55,11 +55,11 @@ function LoginForm() {
         try {
             const { login } = userAuthStore.getState();
             await login({ loginData: data });
-
-            // Navigate to the profile page after successful login
-            setTimeout(() => {
-                router.push('/profile');
-            }, 1000); // Optional delay for a smoother transition
+        
+                // Navigate to the profile page after successful login
+                setTimeout(() => {
+                    router.push('/profile');
+                }, 1000); // Optional delay for a smoother transition
         } catch (error) {
             toast.error("An error occurred while submitting the form. Please try again.");
         }
