@@ -9,7 +9,7 @@ const Contact = () => {
   return (
     <section className=' w-full h-full relative overflow-hidden'>
       <div className='container mx-auto text-black'>
-        <div className='grid md:grid-cols-2'>
+        <div className='grid md:grid-cols-2 gap-5 p-1'>
           {/* left content */}
           <div className='flex flex-col items-center'>
             <Fade direction='left' delay={600} cascade damping={1e-1} triggerOnce={true}>
