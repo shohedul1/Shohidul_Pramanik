@@ -7,14 +7,16 @@ import { Fade } from 'react-awesome-reveal';
 
 const Contact = () => {
   return (
-    <section className='min-h-screen -mt-40 overflow-hidden'>
+    <section className=' w-full h-full relative overflow-hidden'>
       <div className='container mx-auto text-black'>
-        <div className='grid xl:grid-cols-2 mt-24 mb-6 xl:mb-24 '>
+        <div className='grid md:grid-cols-2'>
           {/* left content */}
-          <div className='flex flex-col justify-center'>
+          <div className='flex flex-col items-center'>
             <Fade direction='left' delay={600} cascade damping={1e-1} triggerOnce={true}>
-              <div className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl uppercase font-semibold mb-4 tracking-[4px] bg-gradient-to-r text-center from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
-                Let&copy;s work together.
+              <div className='flex items-center justify-center'>
+                <div className="text-xl  sm:text-3xl md:text-2xl lg:text-4xl uppercase font-semibold mb-4 tracking-[4px] bg-gradient-to-r text-center from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
+                  Let&copy;s work together.
+                </div>
               </div>
             </Fade>
             <Fade direction='left' delay={400} cascade damping={1e-1} triggerOnce={true}>
@@ -30,7 +32,7 @@ const Contact = () => {
               </p>
             </Fade>
           </div>
-          <div className='lg:mt-24'>
+          <div>
             <Form />
           </div>
         </div>

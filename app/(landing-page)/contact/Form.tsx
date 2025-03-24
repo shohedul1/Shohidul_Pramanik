@@ -3,13 +3,14 @@
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { ArrowRightIcon, Building, MessageSquare, UserCheck } from 'lucide-react';
+import { Building, MessageSquare, UserCheck } from 'lucide-react';
 import { toast } from 'react-toastify';
 import React, { useState, useRef, ChangeEvent, FormEvent } from 'react';
 import 'react-toastify/dist/ReactToastify.css';
 import { useRouter } from 'next/navigation';
 import { Fade } from 'react-awesome-reveal';
 import Notification from '../components/Notification/Notification';
+import { motion } from "framer-motion";
 
 // Type for form values
 interface FormValues {
@@ -32,7 +33,7 @@ const Form: React.FC = () => {
     // Handle form submission
     const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        console.log(user);
+        // console.log(user);
 
         try {
             const response = await fetch("/api/from", {
@@ -129,9 +130,20 @@ const Form: React.FC = () => {
 
                 {/* Submit Button */}
                 <Fade direction="right" delay={1200} cascade damping={1e-1} triggerOnce={true}>
-                    <Button className="hover:bg-black hover:text-white dark:hover:bg-lime-500 dark:hover:text-white dark:bg-blue-600 px-4 py-2 bg-red-300 rounded-md">
-                        Just Submit
-                    </Button>
+
+                    <motion.div
+                        whileHover={{ scale: 1.1 }}
+                        animate={{ y: [0, -5, 0] }}
+                        transition={{ repeat: Infinity, duration: 1, ease: "easeInOut" }}
+                        className="w-full  flex items-center justify-center flex-col"
+
+                    >
+                        <Button
+                            className="mt-4 w-full py-2 font-bold text-xl"
+                        >
+                            Just Submit
+                        </Button>
+                    </motion.div>
                 </Fade>
             </form>
 
