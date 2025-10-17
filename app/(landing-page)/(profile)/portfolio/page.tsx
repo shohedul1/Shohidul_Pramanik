@@ -3,7 +3,7 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useState } from "react";
 import { Fade } from "react-awesome-reveal";
-import ProjectCart from "../components/home/fourSection/ProjectCart";
+import ProjectCart from "../../components/home/fourSection/ProjectCart";
 
 
 const projectData = [

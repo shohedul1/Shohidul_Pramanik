@@ -9,8 +9,8 @@ import React, { useState, useRef, ChangeEvent, FormEvent } from 'react';
 import 'react-toastify/dist/ReactToastify.css';
 import { useRouter } from 'next/navigation';
 import { Fade } from 'react-awesome-reveal';
-import Notification from '../components/Notification/Notification';
 import { motion } from "framer-motion";
+import Notification from '../../components/Notification/Notification';
 
 // Type for form values
 interface FormValues {

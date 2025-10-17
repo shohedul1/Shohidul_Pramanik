@@ -5,8 +5,8 @@ import { Fade } from "react-awesome-reveal";
 import { useState } from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Notification from "../components/Notification/Notification";
 import { loadStripe } from "@stripe/stripe-js";
+import Notification from "../../components/Notification/Notification";
 
 
 
