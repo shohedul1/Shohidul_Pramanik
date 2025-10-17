@@ -85,18 +85,46 @@ const AboutButton = () => {
         <DropdownMenuGroup>
           <DropdownMenuSub>
             <DropdownMenuSubTrigger>
-              <UserPlus  className="text-lime-500"/>
-              <span>Customer support</span>
+              <UserPlus className="text-lime-500" />
+              <span>English support</span>
             </DropdownMenuSubTrigger>
             <DropdownMenuPortal>
               <DropdownMenuSubContent>
 
-                <Link href="mailto:shohidulpramanik94@gmail.com" className="w-full">
+                <Link href="/" className="w-full">
                   <DropdownMenuItem>
                     <Mail className="text-emerald-500" />
-                    <span>Email</span>
+                    <span>Basic Vocabulary</span>
                   </DropdownMenuItem>
                 </Link>
+                <Link href="/" className="w-full">
+                  <DropdownMenuItem>
+                    <Mail className="text-emerald-500" />
+                    <span>Basic Grammar</span>
+                  </DropdownMenuItem>
+                </Link>
+                <Link href="/" className="w-full">
+                  <DropdownMenuItem>
+                    <Mail className="text-emerald-500" />
+                    <span>listening Habit</span>
+                  </DropdownMenuItem>
+                </Link>
+                <Link href="/" className="w-full">
+                  <DropdownMenuItem>
+                    <Mail className="text-emerald-500" />
+                    <span>Developer English</span>
+                  </DropdownMenuItem>
+                </Link>
+                <Link href="/'" className="w-full">
+                  <DropdownMenuItem>
+                    <Mail className="text-emerald-500" />
+                    <span>Developer English</span>
+                  </DropdownMenuItem>
+                </Link>
+
+
+
+
 
                 <a href="https://wa.me/8801758225368?text=Hello%20Support%2C%20I%20need%20help!" target="_blank" rel="noopener noreferrer" className="w-full">
                   <DropdownMenuItem>

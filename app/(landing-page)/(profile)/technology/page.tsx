@@ -1,5 +1,5 @@
 import React from 'react'
-import Services from '../components/home/thireSection/Services'
+import Services from '../../components/home/thireSection/Services'
 
 const page = () => {
     return (

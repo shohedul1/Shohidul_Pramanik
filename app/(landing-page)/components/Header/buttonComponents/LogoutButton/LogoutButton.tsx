@@ -1,19 +1,19 @@
 'use client';
 import {
     Cloud,
-    CreditCard,
     Github,
-    Keyboard,
     LifeBuoy,
-    LogOut,
+
     Mail,
+
     MessageSquare,
-    Plus,
+
     PlusCircle,
+
     Settings,
     User,
     UserPlus,
-    Users,
+
 } from "lucide-react"
 
 import {
@@ -33,6 +33,7 @@ import Link from "next/link";
 import { ModeToggle } from "./ModeToggle";
 import { GrTechnology } from "react-icons/gr";
 import { FaFacebookSquare } from "react-icons/fa";
+import { DropdownMenuPortal, DropdownMenuSub, DropdownMenuSubContent, DropdownMenuSubTrigger } from "@radix-ui/react-dropdown-menu";
 
 
 
@@ -73,7 +74,7 @@ const LogoutButton = () => {
                     <DropdownMenuLabel className="flex items-center justify-center">My Account</DropdownMenuLabel>
                     <DropdownMenuSeparator />
                     <DropdownMenuGroup>
-                        <Link href={"/about"}>
+                        <Link href={"/profile"}>
                             <DropdownMenuItem>
                                 <User className="text-sky-600" />
                                 <span>Profile</span>
@@ -95,11 +96,35 @@ const LogoutButton = () => {
                             </span>
                             <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
                         </DropdownMenuItem>
-                        <DropdownMenuItem>
-                            <Keyboard />
-                            <span>Keyboard shortcuts</span>
-                            <DropdownMenuShortcut>⌘K</DropdownMenuShortcut>
-                        </DropdownMenuItem>
+                        < DropdownMenuSub>
+                            <DropdownMenuSubTrigger className="flex items-center px-2 gap-1">
+                                <UserPlus className="text-lime-500 size-[18px]" />
+                                <span>Customer support</span>
+                            </DropdownMenuSubTrigger>
+                            <DropdownMenuPortal >
+                                <DropdownMenuSubContent className="bg-red-100">
+
+                                    <Link href="https://mailto:shohidulpramanik94@gmail.com" className="w-full">
+                                        <DropdownMenuItem>
+                                            <Mail className="text-emerald-500" />
+                                            <span>Email</span>
+                                        </DropdownMenuItem>
+                                    </Link>
+
+                                    <a href="https://wa.me/8801758225368?text=Hello%20Support%2C%20I%20need%20help!" target="_blank" rel="noopener noreferrer" className="w-full">
+                                        <DropdownMenuItem>
+                                            <MessageSquare className="text-lime-600" />
+                                            <span>WhatsApp Support</span>
+                                        </DropdownMenuItem>
+                                    </a>
+                                    <DropdownMenuSeparator />
+                                    <DropdownMenuItem>
+                                        <PlusCircle />
+                                        <span>More...</span>
+                                    </DropdownMenuItem>
+                                </DropdownMenuSubContent>
+                            </DropdownMenuPortal>
+                        </DropdownMenuSub>
                     </DropdownMenuGroup>
 
                     <Link href={"https://github.com/shohedul1?tab=repositories"} target="_blank" rel="noopener noreferrer">
@@ -114,7 +139,7 @@ const LogoutButton = () => {
                             <span>Facebook</span>
                         </DropdownMenuItem>
                     </Link>
-                    
+
 
                     <Link href={"/contact"}>
                         <DropdownMenuItem>
@@ -135,6 +160,5 @@ const LogoutButton = () => {
 }
 
 export default LogoutButton
-
 
 

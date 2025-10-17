@@ -25,7 +25,6 @@ const Nav: FC<NavProps> = ({ className }) => {
           <AboutButton />
         </Fade>
 
-
         <Fade direction="left" delay={900} cascade damping={0.5} triggerOnce>
           <LogoutButton />
         </Fade>
